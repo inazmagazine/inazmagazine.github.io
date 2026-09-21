@@ -1,12 +1,13 @@
 ---
-title: "Məkanın yaddaşı: memarlıqda sakitlik"
-description: "İşıq, material və boşluğun bir araya gələrək gündəlik həyatı necə dəyişdirdiyinə dair vizual esse."
-author: "I’NAZ redaksiyası"
+title: "Məkanın yaddaşı: memarlıqda sakitlikkkk"
+description: İşıq, material və boşluğun bir araya gələrək gündəlik həyatı necə
+  dəyişdirdiyinə dair vizual esse.
+author: I’NAZ redaksiyası
 date: 2026-09-18
-category: "İncəsənət və mədəniyyət"
-image: "/media/architecture.jpg"
-image_alt: "Kölgələrin düşdüyü həndəsi beton səth"
-photo_credit: "Simeon Galabov / Pexels"
+category: İncəsənət və mədəniyyət
+image: /media/architecture.jpg
+image_alt: Kölgələrin düşdüyü həndəsi beton səth
+photo_credit: Simeon Galabov / Pexels
 background: "#e6e7e4"
 text_color: auto
 featured: true
@@ -16,8 +17,8 @@ priority: 1
 partner: false
 status: published
 sample: true
-seo_title: "Məkanın yaddaşı — I’NAZ"
-seo_description: "Memarlıqda işıq, material və sakitlik haqqında nümunə redaksiya yazısı."
+seo_title: Məkanın yaddaşı — I’NAZ
+seo_description: Memarlıqda işıq, material və sakitlik haqqında nümunə redaksiya yazısı.
 ---
 Şəhərin səsi qapının o tayında qaldıqda, məkan öz dilində danışmağa başlayır. İşığın səth üzərində hərəkəti, materialın toxuması və ölçülmüş boşluq gündəlik həyatın ritmini dəyişdirir.
 
