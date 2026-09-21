@@ -1,0 +1,25 @@
+- name: Sahibkarlıq
+  slug: sahibkarliq
+  order: 1
+  active: true
+- name: Moda və gözəllik
+  slug: moda-ve-gozellik
+  order: 2
+  active: true
+- name: İncəsənət və mədəniyyət
+  slug: incesenet-ve-medeniyyet
+  order: 3
+  active: true
+- name: Həyat tərzi
+  slug: heyat-terzi
+  order: 4
+  active: true
+- name: Peşəkarlar
+  slug: pesekarlar
+  order: 5
+  active: true
+- name: Brendlər və layihələr
+  slug: brendler-ve-layiheler
+  order: 6
+  active: true
+

@@ -1,0 +1,25 @@
+- label: Hekayələr
+  url: /hekayeler/
+  order: 1
+  active: true
+- label: İnsanlar
+  url: /insanlar/
+  order: 2
+  active: true
+- label: İdeyalar
+  url: /ideyalar/
+  order: 3
+  active: true
+- label: Jurnal
+  url: /jurnal/
+  order: 4
+  active: true
+- label: Haqqımızda
+  url: /haqqimizda/
+  order: 5
+  active: true
+- label: Axtarış
+  url: /axtaris/
+  order: 6
+  active: true
+
