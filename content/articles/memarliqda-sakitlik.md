@@ -1,5 +1,5 @@
 ---
-title: "Məkanın yaddaşı: memarlıqda sakitlikkkk"
+title: "Məkanın yaddaşı: memarlıqda sakitlik"
 description: İşıq, material və boşluğun bir araya gələrək gündəlik həyatı necə
   dəyişdirdiyinə dair vizual esse.
 author: I’NAZ redaksiyası
