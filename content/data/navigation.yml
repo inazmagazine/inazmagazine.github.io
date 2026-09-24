@@ -1,25 +1,32 @@
-- label: Hekayələr
-  url: /hekayeler/
+- label: Məzmunlar
+  url: /mezmunlar/
   order: 1
   active: true
-- label: İnsanlar
-  url: /insanlar/
+- label: Dəb
+  url: /deb/
   order: 2
   active: true
-- label: İdeyalar
-  url: /ideyalar/
+- label: Həyat tərzi
+  url: /heyat-terzi/
   order: 3
   active: true
-- label: Jurnal
-  url: /jurnal/
+- label: Peşəkarlar
+  url: /pesekarlar/
   order: 4
+  active: true
+- label: Brendlər
+  url: /brendler/
+  order: 5
+  active: true
+- label: Mədəniyyət
+  url: /medeniyyet/
+  order: 6
   active: true
 - label: Haqqımızda
   url: /haqqimizda/
-  order: 5
+  order: 7
   active: true
 - label: Axtarış
   url: /axtaris/
-  order: 6
+  order: 8
   active: true
-

@@ -12,10 +12,11 @@ text_color: auto
 featured: false
 home: false
 hero: false
+home_section: small
+home_order: 6
 priority: 6
 partner: false
 status: published
 sample: true
 ---
 Yol bəzən bir yerə çatmaq üçün deyil, gündəlik sürətdən uzaqlaşmaq üçündür. Dənizin təkrarlanan səsi zamanı başqa cür hiss etdirir.
-

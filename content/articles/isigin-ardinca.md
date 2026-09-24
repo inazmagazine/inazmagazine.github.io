@@ -12,6 +12,8 @@ text_color: auto
 featured: false
 home: true
 hero: false
+home_section: small
+home_order: 4
 priority: 5
 partner: false
 status: published
@@ -22,4 +24,3 @@ sample: true
 ## Gündəlik ritm
 
 Pəncərənin istiqaməti, oturacağın yeri və boş qalan səthlər evdə keçirdiyimiz vaxtın keyfiyyətinə təsir edir.
-

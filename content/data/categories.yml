@@ -1,25 +1,25 @@
-- name: Sahibkarlıq
-  slug: sahibkarliq
+- name: Dəb
+  slug: deb
+  description: "Dəb, gözəllik, üslub və yaradıcı yanaşmalar haqqında məqalələr."
   order: 1
-  active: true
-- name: Moda və gözəllik
-  slug: moda-ve-gozellik
-  order: 2
-  active: true
-- name: İncəsənət və mədəniyyət
-  slug: incesenet-ve-medeniyyet
-  order: 3
   active: true
 - name: Həyat tərzi
   slug: heyat-terzi
-  order: 4
+  description: "Gündəlik yaşam, məkan, səyahət və rifah mövzularında məzmunlar."
+  order: 2
   active: true
 - name: Peşəkarlar
   slug: pesekarlar
+  description: "Öz sahəsində fərqlənən peşəkarların işi, təcrübəsi və hekayələri."
+  order: 3
+  active: true
+- name: Brendlər
+  slug: brendler
+  description: "Yerli və beynəlxalq brendlər, layihələr və sahibkarlıq hekayələri."
+  order: 4
+  active: true
+- name: Mədəniyyət
+  slug: medeniyyet
+  description: "İncəsənət, memarlıq, yaradıcılıq və mədəni həyat haqqında yazılar."
   order: 5
   active: true
-- name: Brendlər və layihələr
-  slug: brendler-ve-layiheler
-  order: 6
-  active: true
-

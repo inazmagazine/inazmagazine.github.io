@@ -1,8 +1,8 @@
 media:
   input: public/media
   output: /media
-  extensions: [jpg, jpeg, png, webp, avif, svg, pdf]
-  categories: [image, document]
+  extensions: [jpg, jpeg, png, webp, avif, svg]
+  categories: [image]
   rename: safe
 
 settings:
@@ -12,218 +12,195 @@ settings:
 components:
   seo:
     type: object
-    label: SEO və paylaşım
+    label: Google və sosial şəbəkələr
+    description: "axtarış nəticəsində və paylaşım zamanı görünən məlumatları idarə edir."
     fields:
-      - { name: seo_title, label: SEO başlığı, type: string, description: "Boş qalsa məqalənin başlığı istifadə olunur." }
-      - { name: seo_description, label: SEO açıqlaması, type: text, options: { maxlength: 170 } }
+      - { name: seo_title, label: Google başlığı, type: string, description: "boş qalsa məqalənin əsas başlığı istifadə edilir; ideal uzunluq 50–60 işarədir." }
+      - { name: seo_description, label: Google açıqlaması, type: text, description: "axtarış nəticəsində başlığın altında görünür; ideal uzunluq 140–160 işarədir.", options: { maxlength: 170 } }
       - name: social_image
-        label: Sosial paylaşım şəkli
+        label: Paylaşım şəkli
         type: image
-        description: "Boş qalsa əsas şəkil istifadə olunur."
-        options: { media: media, extensions: [jpg, jpeg, png, webp], rename: safe }
+        description: "link Instagram, Facebook və digər platformalarda paylaşılarkən görünür; boş qalsa əsas şəkil istifadə edilir."
+        options: { media: media, path: social, extensions: [jpg, jpeg, png, webp, avif], rename: safe }
 
 content:
-  - name: editorial
-    label: Redaksiya
-    type: group
-    items:
-      - name: articles
-        label: Məqalələr
-        type: collection
-        path: content/articles
-        format: yaml-frontmatter
-        filename: { template: "{title}.md", field: true }
-        view: { primary: title, fields: [status, date, category], sort: date, order: desc, search: "title,description,author,category" }
+  - name: articles
+    label: Məzmunlar
+    type: collection
+    path: content/articles
+    format: yaml-frontmatter
+    filename: { template: "{title}.md", field: true }
+    description: "saytdakı məqalələri yaradın, şəkillərini dəyişin, ana səhifədə yerini seçin və yayımlayın."
+    view:
+      primary: title
+      fields: [status, category, date, home_section]
+      sort: date
+      order: desc
+      search: "title,description,author,category"
+    fields:
+      - { name: title, label: Məqalənin başlığı, type: string, required: true, description: "məqalə kartında və açılan səhifənin ən yuxarısında görünür." }
+      - { name: description, label: Qısa təqdimat, type: text, required: true, description: "ana səhifədə və məqalə kartında başlığın altında görünən 1–2 cümlədir.", options: { maxlength: 240 } }
+      - { name: author, label: Müəllif, type: string, required: true, description: "məqaləni hazırlayan şəxsin və ya redaksiyanın adıdır." }
+      - { name: date, label: Yayımlanma tarixi, type: date, required: true, description: "saytda məqalənin tarixi və yeni-köhnə sıralaması üçün istifadə edilir.", options: { format: yyyy-MM-dd } }
+      - name: category
+        label: Bölmə
+        type: select
+        required: true
+        description: "məqalənin navbar bölmələrindən hansında görünəcəyini müəyyən edir."
+        options:
+          values: [Dəb, Həyat tərzi, Peşəkarlar, Brendlər, Mədəniyyət]
+      - name: image
+        label: Əsas şəkil
+        type: image
+        required: true
+        description: "hazırkı şəkli burada görə, silib yenisini seçə və ya kompüterdən yükləyə bilərsiniz; üfüqi, keyfiyyətli şəkil seçin."
+        options: { media: media, path: articles, extensions: [jpg, jpeg, png, webp, avif], rename: safe }
+      - { name: image_alt, label: Şəklin təsviri, type: string, required: true, description: "şəkli görməyən istifadəçi və Google üçün şəkildə nə olduğunu qısa yazın." }
+      - { name: photo_credit, label: Foto müəllifi, type: string, description: "şəklin müəllifini və ya mənbəsini göstərir; lazım deyilsə boş saxlayın." }
+      - name: gallery
+        label: Məqalədaxili şəkillər
+        type: object
+        list: true
+        description: "məqalənin mətnindən sonra əlavə şəkillər göstərir; + düyməsi ilə istədiyiniz qədər şəkil əlavə edə bilərsiniz."
         fields:
-          - { name: title, label: Başlıq, type: string, required: true }
-          - { name: description, label: Qısa açıqlama, type: text, required: true, options: { maxlength: 240 } }
-          - { name: author, label: Müəllif, type: string, required: true }
-          - { name: date, label: Yayımlanma tarixi, type: date, required: true, options: { format: yyyy-MM-dd } }
-          - name: category
-            label: Kateqoriya
-            type: select
-            required: true
-            options:
-              values: [Sahibkarlıq, Moda və gözəllik, İncəsənət və mədəniyyət, Həyat tərzi, Peşəkarlar, Brendlər və layihələr, İnsanlar]
-          - name: tags
-            label: Teqlər
-            type: string
-            list: true
-            description: "Axtarışı dəqiqləşdirən qısa sözlər."
           - name: image
-            label: Əsas şəkil
+            label: Şəkil
             type: image
             required: true
-            options: { media: media, extensions: [jpg, jpeg, png, webp, avif], rename: safe }
-          - { name: image_alt, label: Əsas şəklin alt mətni, type: string, required: true, description: "Şəkli görməyən oxucu üçün qısa təsvir." }
-          - { name: photo_credit, label: Foto müəllifi, type: string }
-          - name: gallery
-            label: Qalereya
-            type: object
-            list: true
-            fields:
-              - name: image
-                label: Şəkil
-                type: image
-                options: { media: media, extensions: [jpg, jpeg, png, webp, avif], rename: safe }
-              - { name: alt, label: Alt mətn, type: string, required: true }
-              - { name: caption, label: Şəkilaltı yazı, type: string }
-          - { name: background, label: Məqalə fon rəngi, type: string, required: true, pattern: { regex: "^#[0-9a-fA-F]{6}$", message: "Rəngi #RRGGBB formatında yazın, məsələn #ffffff." }, description: "Mətn rəngi avtomatik seçilir." }
-          - name: text_color
-            label: Mətn rəngi
-            type: select
-            options:
-              values:
-                - { name: auto, label: Avtomatik }
-                - { name: black, label: Qara }
-                - { name: white, label: Ağ }
-          - { name: home, label: Ana səhifədə göstər, type: boolean }
-          - { name: hero, label: Əsas böyük məqalə et, type: boolean, description: "Ana səhifə parametrlərindəki əsas seçim üstün tutulur." }
-          - { name: featured, label: Seçilmiş məqalə et, type: boolean }
-          - { name: priority, label: Sıralama prioriteti, type: number, options: { min: 0, max: 100 } }
-          - { name: partner, label: Tərəfdaş materialıdır, type: boolean }
-          - name: status
-            label: Status
-            type: select
-            required: true
-            options:
-              values:
-                - { name: draft, label: Qaralama }
-                - { name: published, label: Yayımlanmış }
-          - { name: sample, label: Nümunə məzmundur, type: boolean }
-          - { name: body, label: Tam mətn, type: rich-text, required: true, options: { format: markdown, media: media, path: articles, rename: safe } }
-          - { name: seo, component: seo }
+            description: "şəkli seçin və ya kompüterdən yenisini yükləyin; CMS mövcud şəkli önizləmədə göstərir."
+            options: { media: media, path: galleries, extensions: [jpg, jpeg, png, webp, avif], rename: safe }
+          - { name: alt, label: Şəklin təsviri, type: string, required: true, description: "şəkildə görünənləri bir cümlə ilə təsvir edin." }
+          - { name: caption, label: Şəkilaltı yazı, type: string, description: "şəklin altında oxucuya görünəcək əlavə qeyddir; istəyə bağlıdır." }
+      - name: home_section
+        label: Ana səhifədə yeri
+        type: select
+        required: true
+        description: "Əsas seçsəniz yuxarıdakı 2 böyük yerdən birində, Kiçik seçsəniz aşağıdakı 4 kartdan birində görünür."
+        options:
+          values:
+            - { name: main, label: Əsas böyük məqalə }
+            - { name: small, label: Kiçik məqalə kartı }
+            - { name: hidden, label: Ana səhifədə göstərmə }
+      - { name: home_order, label: Ana səhifədə sıra, type: number, description: "kiçik rəqəm əvvəl görünür: əsas məqalələr üçün 1–2, kiçik kartlar üçün 3–6 yazın.", options: { min: 1, max: 99 } }
+      - { name: background, label: Məqalə səhifəsinin fon rəngi, type: string, required: true, description: "yalnız bu məqalə açıldıqda istifadə edilir; məsələn #F7EBDD.", pattern: { regex: "^#[0-9a-fA-F]{6}$", message: "rəngi #RRGGBB formatında yazın, məsələn #F7EBDD." } }
+      - name: text_color
+        label: Məqalə mətninin rəngi
+        type: select
+        description: "Avtomatik seçim fon rənginə uyğun oxunaqlı rəngi özü təyin edir."
+        options:
+          values:
+            - { name: auto, label: Avtomatik }
+            - { name: black, label: Tünd }
+            - { name: white, label: Ağ }
+      - { name: partner, label: Tərəfdaş materialıdır, type: boolean, description: "aktiv olduqda məqalədə tərəfdaş materialı qeydi göstərilir." }
+      - name: status
+        label: Yayımlanma vəziyyəti
+        type: select
+        required: true
+        description: "Qaralama saytda görünmür; hazır məqaləni Yayımlanmış edin."
+        options:
+          values:
+            - { name: draft, label: Qaralama — saytda görünmür }
+            - { name: published, label: Yayımlanmış — saytda görünür }
+      - { name: body, label: Məqalənin tam mətni, type: rich-text, required: true, description: "başlıqlar, siyahılar, keçidlər və mətn daxil edin; redaktorda əlavə şəkil də yerləşdirə bilərsiniz.", options: { format: markdown, media: media, path: articles, rename: safe } }
+      - { name: seo, component: seo }
 
-      - name: issues
-        label: Jurnal buraxılışları
-        type: collection
-        path: content/issues
-        format: yaml-frontmatter
-        filename: { template: "{number}-{title}.md", field: true }
-        view: { primary: title, fields: [number, year, status], sort: date, order: desc }
-        fields:
-          - { name: title, label: Buraxılış adı, type: string, required: true }
-          - { name: number, label: Buraxılış nömrəsi, type: string, required: true }
-          - { name: month, label: Ay, type: string, required: true }
-          - { name: year, label: İl, type: number, required: true }
-          - { name: description, label: Qısa təqdimat, type: text, required: true }
-          - name: cover
-            label: Üz qabığı
-            type: image
-            required: true
-            options: { media: media, extensions: [jpg, jpeg, png, webp], rename: safe }
-          - { name: cover_alt, label: Üz qabığının alt mətni, type: string, required: true }
-          - name: pdf
-            label: PDF faylı
-            type: file
-            description: "Böyük fayllar üçün aşağıdakı xarici URL sahəsini seçin."
-            options: { media: media, extensions: [pdf], rename: safe }
-          - { name: external_url, label: Xarici oxuma/PDF keçidi, type: string }
-          - { name: current, label: Cari buraxılışdır, type: boolean }
-          - { name: home, label: Ana səhifədə göstər, type: boolean }
-          - { name: date, label: Yayımlanma tarixi, type: date, required: true, options: { format: yyyy-MM-dd } }
-          - name: status
-            label: Status
-            type: select
-            required: true
-            options: { values: [{ name: draft, label: Qaralama }, { name: published, label: Yayımlanmış }] }
-          - { name: sample, label: Nümunə buraxılışdır, type: boolean }
-          - { name: body, label: Buraxılış haqqında, type: rich-text, options: { format: markdown, media: media } }
-
-      - name: team
-        label: Komanda
-        type: collection
-        path: content/team
-        format: yaml-frontmatter
-        filename: { template: "{name}.md", field: true }
-        view: { primary: name, fields: [role, active], sort: order, order: asc }
-        fields:
-          - { name: name, label: Ad və soyad, type: string, required: true }
-          - { name: role, label: Vəzifə, type: string, required: true }
-          - name: photo
-            label: Foto
-            type: image
-            options: { media: media, path: team, extensions: [jpg, jpeg, png, webp], rename: safe }
-          - { name: bio, label: Qısa bio, type: text }
-          - { name: order, label: Sıralama, type: number }
-          - { name: active, label: Aktivdir, type: boolean }
-
-  - name: structure
-    label: Sayt quruluşu
+  - name: main_texts
+    label: Ana və Haqqımızda mətnləri
     type: group
+    description: "ana səhifənin sonundakı dəvət cümləsini və Haqqımızda səhifəsinin əsas mətnini dəyişin."
     items:
-      - name: home
-        label: Ana səhifə parametrləri
+      - name: home_sentence
+        label: Ana səhifədə I’NAZ haqqında cümlə
+        type: file
+        path: cumle.md
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: CMS-də görünən ad, type: string, required: true, description: "yalnız idarəetmə panelində tanımaq üçündür; saytda görünmür." }
+          - { name: body, label: Cümlə və ya qısa mətn, type: rich-text, required: true, description: "ana səhifədə I’NAZ haqqında başlığının altında görünür." }
+      - name: about_text
+        label: Haqqımızda səhifəsinin mətni
+        type: file
+        path: haqqinda.md
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: CMS-də görünən ad, type: string, required: true, description: "yalnız idarəetmə panelində tanımaq üçündür; saytda görünmür." }
+          - { name: body, label: Haqqımızda mətni, type: rich-text, required: true, description: "Haqqımızda səhifəsində əlaqə məlumatlarının üstündə görünən əsas mətndir." }
+      - name: home_heading
+        label: I’NAZ haqqında başlıq
         type: file
         path: content/data/home.yml
         fields:
-          - { name: hero, label: Əsas məqalənin fayl adı, type: string, required: true, description: "Məsələn: memarliqda-sakitlik" }
-          - { name: secondary, label: İkinci dərəcəli məqalələr, type: string, list: true }
-          - { name: featured, label: Seçilmiş məqalələr, type: string, list: true }
-          - { name: mission_title, label: Missiya başlığı, type: string }
-          - { name: mission_text, label: Missiya mətni, type: text }
-          - { name: show_magazine, label: Jurnal bölməsini göstər, type: boolean }
-          - { name: show_people, label: İnsanlar bölməsini göstər, type: boolean }
-          - { name: show_ideas, label: İdeyalar bölməsini göstər, type: boolean }
-      - name: site
-        label: Sayt parametrləri
-        type: file
-        path: content/data/site.yml
-        fields:
-          - { name: name, label: Sayt adı, type: string, required: true }
-          - { name: credit, label: Loqo altı yazı, type: string }
-          - { name: language, label: Dil kodu, type: string }
-          - { name: description, label: Əsas SEO açıqlaması, type: text }
-          - name: logo_dark
-            label: Açıq fonda loqo
-            type: image
-            options: { media: media, extensions: [png, webp, svg], rename: safe }
-          - name: logo_light
-            label: Tünd fonda loqo
-            type: image
-            options: { media: media, extensions: [png, webp, svg], rename: safe }
-          - { name: email, label: E-poçt, type: string }
-          - { name: phone, label: Telefon, type: string }
-          - { name: instagram, label: Instagram keçidi, type: string }
-          - { name: whatsapp, label: WhatsApp keçidi, type: string }
-          - { name: footer, label: Footer mətni, type: text }
-          - { name: base_url, label: Saytın tam domeni, type: string, description: "Domen alındıqda https://example.com ünvanını dəyişin." }
-      - name: navigation
-        label: Naviqasiya
-        type: file
-        path: content/data/navigation.yml
-        list: true
-        fields:
-          - { name: label, label: Elementin adı, type: string, required: true }
-          - { name: url, label: Keçid, type: string, required: true }
-          - { name: order, label: Sıralama, type: number, required: true }
-          - { name: new_tab, label: Yeni tabda açılsın, type: boolean }
-          - { name: active, label: Aktivdir, type: boolean }
-      - name: categories
-        label: Kateqoriyalar
-        type: file
-        path: content/data/categories.yml
-        list: true
-        fields:
-          - { name: name, label: Ad, type: string, required: true }
-          - { name: slug, label: URL adı, type: string, required: true, pattern: "^[a-z0-9-]+$" }
-          - { name: description, label: Açıqlama, type: text }
-          - { name: order, label: Sıralama, type: number }
-          - { name: active, label: Aktivdir, type: boolean }
-          - { name: navigation, label: Naviqasiyada göstər, type: boolean }
+          - { name: mission_title, label: Başlıq, type: string, required: true, description: "ana səhifədə I’NAZ haqqında hissəsinin iri başlığıdır." }
 
-  - name: pages
-    label: Statik səhifələr
+  - name: site_settings
+    label: Sayt və əlaqə məlumatları
+    type: file
+    path: content/data/site.yml
+    description: "sayt adını, loqoları, Google açıqlamasını və əlaqə keçidlərini idarə edir."
+    fields:
+      - { name: name, label: Sayt adı, type: string, required: true, description: "brauzer başlığında və SEO məlumatlarında istifadə edilir." }
+      - { name: credit, label: Loqonun altındakı yazı, type: string, description: "loqo faylındakı alt yazının mətn qarşılığıdır." }
+      - { name: language, label: Saytın dil kodu, type: string, required: true, description: "Google və brauzer üçün dil kodudur; Azərbaycan dili üçün az saxlayın." }
+      - { name: description, label: Saytın Google açıqlaması, type: text, required: true, description: "ana səhifə axtarış nəticəsində görünəndə istifadə olunur." }
+      - name: logo_dark
+        label: Başlıq üçün tünd loqo
+        type: image
+        required: true
+        description: "saytın yuxarı hissəsində görünür; mövcud loqonu görə və dəyişə bilərsiniz."
+        options: { media: media, path: brand, extensions: [png, webp, svg], rename: safe }
+      - name: logo_light
+        label: Footer üçün açıq loqo
+        type: image
+        required: true
+        description: "saytın tünd footer hissəsində görünür; şəffaf fonlu açıq loqo seçin."
+        options: { media: media, path: brand, extensions: [png, webp, svg], rename: safe }
+      - { name: email, label: E-poçt, type: string, required: true, description: "footer və Haqqımızda səhifəsində kliklənən əlaqə ünvanıdır." }
+      - { name: phone, label: Telefon, type: string, required: true, description: "footer və Haqqımızda səhifəsində göstərilən telefon nömrəsidir." }
+      - { name: instagram, label: Instagram keçidi, type: string, required: true, description: "profilin tam https:// ünvanını yazın." }
+      - { name: whatsapp, label: WhatsApp keçidi, type: string, required: true, description: "söhbətə yönləndirən tam https:// ünvanını yazın." }
+      - { name: base_url, label: Saytın domeni, type: string, required: true, description: "SEO üçün tam ünvanı saxlayın: https://inazmagazine.com" }
+
+  - name: navigation
+    label: Navbar və footer menyusu
+    type: file
+    path: content/data/navigation.yml
+    list: true
+    description: "yuxarı menyu ilə footerdə eyni keçidləri və sıralamanı idarə edir; URL-ləri dəyişərkən ehtiyatlı olun."
+    fields:
+      - { name: label, label: Menyuda görünən ad, type: string, required: true, description: "istifadəçinin navbar və footerdə gördüyü mətndir." }
+      - { name: url, label: Açılacaq ünvan, type: string, required: true, description: "klik ediləndə açılan səhifə yoludur; məsələn /deb/." }
+      - { name: order, label: Sıra, type: number, required: true, description: "kiçik rəqəm menyuda daha əvvəl görünür." }
+      - { name: active, label: Menyuda göstər, type: boolean, description: "söndürdükdə keçid həm navbardan, həm də footerdən gizlənir." }
+
+  - name: categories
+    label: Bölmə səhifələri
+    type: file
+    path: content/data/categories.yml
+    list: true
+    description: "Dəb, Həyat tərzi və digər məzmun səhifələrinin adını və açıqlamasını idarə edir."
+    fields:
+      - { name: name, label: Bölmənin adı, type: string, required: true, description: "məqalə əlavə edərkən seçilən kateqoriya adı ilə eyni olmalıdır." }
+      - { name: slug, label: Səhifə ünvanı, type: string, required: true, description: "yalnız kiçik latın hərfləri və defis istifadə edin; məsələn heyat-terzi.", pattern: "^[a-z0-9-]+$" }
+      - { name: description, label: Bölmənin açıqlaması, type: text, required: true, description: "bölmə səhifəsində başlığın altında və Google nəticəsində görünür." }
+      - { name: order, label: Sıra, type: number, required: true, description: "CMS-də bölmələrin sırasını müəyyən edir." }
+      - { name: active, label: Bölmə aktivdir, type: boolean, description: "söndürülən bölmə üçün səhifə yaradılmır." }
+
+  - name: legal_pages
+    label: Məxfilik və istifadə qaydaları
     type: collection
     path: content/pages
     format: yaml-frontmatter
     filename: { template: "{title}.md", field: true }
+    description: "footerin hüquqi səhifələrində görünən mətnləri redaktə edir; about faylını burada silməyin."
     view: { primary: title, fields: [status] }
     fields:
-      - { name: title, label: Səhifə başlığı, type: string, required: true }
-      - { name: description, label: SEO açıqlaması, type: text }
+      - { name: title, label: Səhifə başlığı, type: string, required: true, description: "səhifənin yuxarısında və brauzer başlığında görünür." }
+      - { name: description, label: Google açıqlaması, type: text, required: true, description: "axtarış sistemləri üçün qısa səhifə təsviridir." }
       - name: status
-        label: Status
+        label: Vəziyyət
         type: select
+        required: true
+        description: "Yayımlanmış saxlayın ki, səhifə saytda açılsın."
         options: { values: [{ name: draft, label: Qaralama }, { name: published, label: Yayımlanmış }] }
-      - { name: body, label: Məzmun, type: rich-text, required: true, options: { format: markdown, media: media, path: pages, rename: safe } }
+      - { name: body, label: Səhifənin mətni, type: rich-text, required: true, description: "məxfilik və ya istifadə qaydalarının tam mətnidir.", options: { format: markdown, media: media, path: pages, rename: safe } }

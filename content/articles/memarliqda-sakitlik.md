@@ -4,7 +4,7 @@ description: İşıq, material və boşluğun bir araya gələrək gündəlik h�
   dəyişdirdiyinə dair vizual esse.
 author: I’NAZ redaksiyası
 date: 2026-09-18
-category: İncəsənət və mədəniyyət
+category: Mədəniyyət
 image: /media/architecture.jpg
 image_alt: Kölgələrin düşdüyü həndəsi beton səth
 photo_credit: Simeon Galabov / Pexels
@@ -13,6 +13,8 @@ text_color: auto
 featured: true
 home: true
 hero: true
+home_section: main
+home_order: 1
 priority: 1
 partner: false
 status: published

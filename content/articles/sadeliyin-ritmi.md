@@ -3,7 +3,7 @@ title: "Sadəliyin yeni ritmi"
 description: "Geyimdə material, hərəkət və uzunömürlülük haqqında sakit bir baxış."
 author: "I’NAZ redaksiyası"
 date: 2026-09-08
-category: "Moda və gözəllik"
+category: "Dəb"
 image: "/media/fashion.jpg"
 image_alt: "Neytral rəngli geyimdə model"
 photo_credit: "Ron Lach / Pexels"
@@ -12,6 +12,8 @@ text_color: auto
 featured: true
 home: true
 hero: false
+home_section: small
+home_order: 3
 priority: 3
 partner: false
 status: published
@@ -22,4 +24,3 @@ Moda yalnız mövsümün rəngi deyil. Bədənlə birlikdə hərəkət edən par
 ## Az, amma düşünülmüş
 
 Şüurlu seçim daha az almaqla başlayır. Keyfiyyətli material və aydın funksiya geyimin ömrünü uzadır.
-

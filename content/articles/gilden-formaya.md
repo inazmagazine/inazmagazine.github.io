@@ -12,6 +12,8 @@ text_color: auto
 featured: true
 home: true
 hero: false
+home_section: main
+home_order: 2
 priority: 2
 partner: false
 status: published
@@ -22,4 +24,3 @@ Yaradıcı proses bəzən bir ovuc gildən başlayır. Forma yavaş-yavaş yaran
 ## Əlin izi
 
 Kütləvi istehsalın sürətinə qarşı əl işi zaman, diqqət və səbr təklif edir. Hər əşya özündə onu yaradan insanın qərarlarını daşıyır.
-
