@@ -8,7 +8,7 @@ category: İncəsənət və mədəniyyət
 image: /media/architecture.jpg
 image_alt: Kölgələrin düşdüyü həndəsi beton səth
 photo_credit: Simeon Galabov / Pexels
-background: "#090041"
+background: "#e6e7e4"
 text_color: auto
 featured: true
 home: true
