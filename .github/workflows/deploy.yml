@@ -35,13 +35,8 @@ jobs:
       - name: Set GitHub Pages paths
         shell: bash
         run: |
-          repo_name="${GITHUB_REPOSITORY#*/}"
-          if [[ "${repo_name,,}" == "${GITHUB_REPOSITORY_OWNER,,}.github.io" ]]; then
-            echo "BASE_PATH=" >> "$GITHUB_ENV"
-          else
-            echo "BASE_PATH=/$repo_name" >> "$GITHUB_ENV"
-          fi
-          echo "SITE_URL=https://${GITHUB_REPOSITORY_OWNER}.github.io" >> "$GITHUB_ENV"
+          echo "BASE_PATH=" >> "$GITHUB_ENV"
+          echo "SITE_URL=https://inazmagazine.com" >> "$GITHUB_ENV"
 
       - name: Build and test
         run: npm run check
