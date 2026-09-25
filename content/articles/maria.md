@@ -65,8 +65,6 @@ Məryəm Novruzi Londonda yaşayan azərbaycanlı biznes inkişafı və kommunik
 
  Məryəmin yaradıcı və media fəaliyyəti beynəlxalq platformalarda da diqqət çəkib. O, NARGIS Magazine tərəfindən Londondakı fəaliyyəti, yaradıcılığı və Azərbaycan mədəniyyətinin xaricdə təqdim olunmasına yönəlmiş işi ilə bağlı ayrıca materialda təqdim edilib. Eyni zamanda onun beynəlxalq media platformalarında görünməsi və müxtəlif yaradıcı layihələrdə iştirakı şəxsi brendinin Azərbaycan sərhədlərindən kənarda formalaşmasına şərait yaradıb.
 
-
-
  Onun fəaliyyətinin diqqətçəkən istiqamətlərindən biri Azərbaycan mədəniyyətini və azərbaycanlı gənclərin potensialını beynəlxalq auditoriyaya təqdim etmək istəyidir. Londondakı fəaliyyətində Azərbaycanla bağlı layihələrə, icma təşəbbüslərinə və iki ölkə arasında münasibətləri gücləndirən tədbirlərə davamlı maraq göstərir. Peşəkar platformalarında da beynəlxalq təcrübənin yalnız karyera imkanlarını genişləndirmək deyil, fərqli mədəniyyətləri anlamaq, insanlarla etimad qurmaq və müxtəlif düşüncə tərzlərini öyrənmək baxımından əhəmiyyətini vurğulayır.
 
 
