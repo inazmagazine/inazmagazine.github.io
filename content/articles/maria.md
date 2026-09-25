@@ -4,7 +4,7 @@ description: Azərbaycanla qlobal biznes arasında qurulan körpü
 author: I'NAZ redaksiyası
 date: 2026-09-25
 category: Peşəkarlar
-image: /media/img7993-3.jpg
+image: /media/img7993.jpeg
 image_alt: Məryəm Novruzi
 home_section: main
 home_order: 1
