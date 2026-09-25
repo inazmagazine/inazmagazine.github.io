@@ -1,5 +1,5 @@
 ---
-title: "Məkanın yaddaşı: memarlıqda sakitlik"
+title: Məryəm Novruzi
 description: Azərbaycanla qlobal biznes arasında qurulan körpü
 author: I’NAZ redaksiyası
 date: 2026-09-18
