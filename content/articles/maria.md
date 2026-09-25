@@ -3,7 +3,7 @@ title: Məryəm Novruzi
 description: Azərbaycanla qlobal biznes arasında qurulan körpü
 author: I’NAZ redaksiyası
 date: 2026-09-18
-category: Mədəniyyət
+category: Peşəkarlar
 image: /media/img7993-1.jpg
 image_alt: Məryəm Novruzi
 background: "#e6e7e4"
