@@ -1,7 +1,6 @@
 ---
 title: "Məkanın yaddaşı: memarlıqda sakitlik"
-description: İşıq, material və boşluğun bir araya gələrək gündəlik həyatı necə
-  dəyişdirdiyinə dair vizual esse.
+description: Azərbaycanla qlobal biznes arasında qurulan körpü
 author: I’NAZ redaksiyası
 date: 2026-09-18
 category: Mədəniyyət
