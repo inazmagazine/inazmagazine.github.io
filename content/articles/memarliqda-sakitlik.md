@@ -26,7 +26,7 @@ seo_description: Memarlıqda işıq, material və sakitlik haqqında nümunə re
 
 ## Sakitliyin quruluşu
 
-Yaxşı məkan özünü izah etməyə çalışmır. O, insana nəfəs almaq, baxmaq və düşünmək üçün yer verir. Betonun sərtliyi, ağacın istiliyi və gün işığının dəyişkənliyi bir-birini tamamlayır.
+Yaxşı məkan özünü izah etməyə çalışmır. O, insana nəfəs almaq, baxmaq və düşünmək üçün yer verir. Betonun sərtliyi, ağacın istiliyi və gün zthzatrjhnzeatnhjjzdhgathatşığının dəyişkənliyi bir-birini tamamlayır.
 
 > Məkan yalnız gördüyümüz forma deyil; içində keçirdiyimiz vaxtın yaddaşıdır.
 
