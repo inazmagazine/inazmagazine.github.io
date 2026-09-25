@@ -6,8 +6,7 @@ author: I’NAZ redaksiyası
 date: 2026-09-18
 category: Mədəniyyət
 image: /media/img9066jpg.jpeg
-image_alt: Kölgələrin düşdüyü həndəsi beton səth
-photo_credit: Simeon Galabov / Pexels
+image_alt: Məryəm Novruzi
 background: "#e6e7e4"
 text_color: auto
 featured: true
