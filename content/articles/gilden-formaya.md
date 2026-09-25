@@ -19,7 +19,7 @@ partner: false
 status: published
 sample: true
 ---
-Məryəm Novruzi Londonda yaşayan azərbaycanlı biznes inkişafı və kommunikasiya mütəxəssisidir. Peşəkar fəaliyyətində strateji tərəfdaşlıqların qurulması, beynəlxalq biznes əlaqələrinin inkişaf etdirilməsi, investor münasibətləri, kommunikasiya və müxtəlif bazarlar arasında əməkdaşlıq imkanlarının yaradılması əsas istiqamətlər sırasında yer alır. Azərbaycanla Böyük Britaniya arasında formalaşdırdığı peşəkar əlaqələrlə yanaşı, onun fəaliyyəti Türkiyə, Mərkəzi Asiya və daha geniş Avrasiya regionunu da əhatə edir.
+Məryəm Novruzi Londonda yaşayan azərbaycanlı biznes inkişafı və kommunikasiya mütəxəssisidir. Peşəkar fəaliyyətində strateji tərəfdaşlıqların qurulması, beynəlxalq biznes əlaqələrinin inkişaf etdirilməsi, investor münasibətləri, kommunikasiya və müxtəlif bazarlar arasında əməkdaşlıq imkanlarının yaradılması əsas istiqamətlər sırasında yer alır. Azərbaycanla Böyük Britaniya arasında formalaşdırdığı peşəkar əlaqələrlə yanaşı, onun fəaliyyəti Türkiyə, Mərkəzi Asiya və daha geniş Avrasiya regionunu da əhatə edir..
 
 Bakıda doğulub böyüyən Məryəmin yaradıcılığa marağı hələ erkən yaşlarından formalaşıb. Rəssamlıqla məşğul olan Məryəm 16 yaşında ilk fərdi sərgisini keçirib. Yaradıcılıqla başlayan bu yol sonrakı illərdə kommunikasiya, media, şəxsi brend və biznes sahələri ilə birləşərək onun fəaliyyətinin daha geniş istiqamətdə inkişafına zəmin yaradıb.
 
