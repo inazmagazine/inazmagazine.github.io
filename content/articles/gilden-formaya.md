@@ -1,5 +1,5 @@
 ---
-title: Gildən formayaaa
+title: Gildən formaya
 description: Əl işi ilə müasir estetikanın kəsişdiyi keramika emalatxanasına baxış.
 author: I’NAZ redaksiyası
 date: 2026-09-12
