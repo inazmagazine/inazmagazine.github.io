@@ -19,6 +19,9 @@ status: published
 sample: true
 seo_title: Məkanın yaddaşı — I’NAZ
 seo_description: Memarlıqda işıq, material və sakitlik haqqında nümunə redaksiya yazısı.
+seo:
+  seo_title: Məryəm Novruzi
+  seo_description: Azərbaycanla qlobal biznes arasında qurulan körpü
 ---
 Məryəm Novruzi Londonda yaşayan azərbaycanlı biznes inkişafı və kommunikasiya mütəxəssisidir. Peşəkar fəaliyyətində strateji tərəfdaşlıqların qurulması, beynəlxalq biznes əlaqələrinin inkişaf etdirilməsi, investor münasibətləri, kommunikasiya və müxtəlif bazarlar arasında əməkdaşlıq imkanlarının yaradılması əsas istiqamətlər sırasında yer alır. Azərbaycanla Böyük Britaniya arasında formalaşdırdığı peşəkar əlaqələrlə yanaşı, onun fəaliyyəti Türkiyə, Mərkəzi Asiya və daha geniş Avrasiya regionunu da əhatə edir.
 
