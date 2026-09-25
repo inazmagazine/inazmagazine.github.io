@@ -1,12 +1,12 @@
 ---
-title: "Gildən formaya"
-description: "Əl işi ilə müasir estetikanın kəsişdiyi keramika emalatxanasına baxış."
-author: "I’NAZ redaksiyası"
+title: Gildən formayaaa
+description: Əl işi ilə müasir estetikanın kəsişdiyi keramika emalatxanasına baxış.
+author: I’NAZ redaksiyası
 date: 2026-09-12
-category: "Peşəkarlar"
-image: "/media/ceramics.jpg"
-image_alt: "İşıqlı emalatxanada keramika qablar"
-photo_credit: "Amar Preciado / Pexels"
+category: Peşəkarlar
+image: /media/ceramics.jpg
+image_alt: İşıqlı emalatxanada keramika qablar
+photo_credit: Amar Preciado / Pexels
 background: "#f1eee7"
 text_color: auto
 featured: true
