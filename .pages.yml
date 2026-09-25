@@ -1,9 +1,11 @@
 media:
-  input: public/media
-  output: /media
-  extensions: [jpg, jpeg, png, webp, avif, svg]
-  categories: [image]
-  rename: safe
+  - name: media
+    label: Şəkil kitabxanası
+    input: public/media
+    output: /media
+    extensions: [jpg, jpeg, png, webp, avif, svg]
+    categories: [image]
+    rename: safe
 
 settings:
   content:
@@ -21,7 +23,7 @@ components:
         label: Paylaşım şəkli
         type: image
         description: "link Instagram, Facebook və digər platformalarda paylaşılarkən görünür; boş qalsa əsas şəkil istifadə edilir."
-        options: { media: media, path: social, extensions: [jpg, jpeg, png, webp, avif], rename: safe }
+        options: { media: media, extensions: [jpg, jpeg, png, webp, avif], rename: safe }
 
 content:
   - name: articles
@@ -54,7 +56,7 @@ content:
         type: image
         required: true
         description: "hazırkı şəkli burada görə, silib yenisini seçə və ya kompüterdən yükləyə bilərsiniz; üfüqi, keyfiyyətli şəkil seçin."
-        options: { media: media, path: articles, extensions: [jpg, jpeg, png, webp, avif], rename: safe }
+        options: { media: media, extensions: [jpg, jpeg, png, webp, avif], rename: safe }
       - { name: image_alt, label: Şəklin təsviri, type: string, required: true, description: "şəkli görməyən istifadəçi və Google üçün şəkildə nə olduğunu qısa yazın." }
       - { name: photo_credit, label: Foto müəllifi, type: string, description: "şəklin müəllifini və ya mənbəsini göstərir; lazım deyilsə boş saxlayın." }
       - name: gallery
@@ -68,7 +70,7 @@ content:
             type: image
             required: true
             description: "şəkli seçin və ya kompüterdən yenisini yükləyin; CMS mövcud şəkli önizləmədə göstərir."
-            options: { media: media, path: galleries, extensions: [jpg, jpeg, png, webp, avif], rename: safe }
+            options: { media: media, extensions: [jpg, jpeg, png, webp, avif], rename: safe }
           - { name: alt, label: Şəklin təsviri, type: string, required: true, description: "şəkildə görünənləri bir cümlə ilə təsvir edin." }
           - { name: caption, label: Şəkilaltı yazı, type: string, description: "şəklin altında oxucuya görünəcək əlavə qeyddir; istəyə bağlıdır." }
       - name: home_section
@@ -102,7 +104,7 @@ content:
           values:
             - { name: draft, label: Qaralama — saytda görünmür }
             - { name: published, label: Yayımlanmış — saytda görünür }
-      - { name: body, label: Məqalənin tam mətni, type: rich-text, required: true, description: "başlıqlar, siyahılar, keçidlər və mətn daxil edin; redaktorda əlavə şəkil də yerləşdirə bilərsiniz.", options: { format: markdown, media: media, path: articles, rename: safe } }
+      - { name: body, label: Məqalənin tam mətni, type: rich-text, required: true, description: "başlıqlar, siyahılar, keçidlər və mətn daxil edin; redaktorda əlavə şəkil də yerləşdirə bilərsiniz.", options: { format: markdown, media: media, rename: safe } }
       - { name: seo, component: seo }
 
   - name: main_texts
@@ -144,17 +146,17 @@ content:
       - { name: language, label: Saytın dil kodu, type: string, required: true, description: "Google və brauzer üçün dil kodudur; Azərbaycan dili üçün az saxlayın." }
       - { name: description, label: Saytın Google açıqlaması, type: text, required: true, description: "ana səhifə axtarış nəticəsində görünəndə istifadə olunur." }
       - name: logo_dark
-        label: Başlıq üçün tünd loqo
+        label: Açıq fon üçün ehtiyat loqo
         type: image
         required: true
-        description: "saytın yuxarı hissəsində görünür; mövcud loqonu görə və dəyişə bilərsiniz."
-        options: { media: media, path: brand, extensions: [png, webp, svg], rename: safe }
+        description: "açıq fon üçün ehtiyat variantdır; hazırkı tünd dizaynda açıq loqo göstərilir."
+        options: { media: media, extensions: [png, webp, svg], rename: safe }
       - name: logo_light
-        label: Footer üçün açıq loqo
+        label: Header və footer loqosu
         type: image
         required: true
         description: "saytın tünd footer hissəsində görünür; şəffaf fonlu açıq loqo seçin."
-        options: { media: media, path: brand, extensions: [png, webp, svg], rename: safe }
+        options: { media: media, extensions: [png, webp, svg], rename: safe }
       - { name: email, label: E-poçt, type: string, required: true, description: "footer və Haqqımızda səhifəsində kliklənən əlaqə ünvanıdır." }
       - { name: phone, label: Telefon, type: string, required: true, description: "footer və Haqqımızda səhifəsində göstərilən telefon nömrəsidir." }
       - { name: instagram, label: Instagram keçidi, type: string, required: true, description: "profilin tam https:// ünvanını yazın." }
@@ -203,4 +205,4 @@ content:
         required: true
         description: "Yayımlanmış saxlayın ki, səhifə saytda açılsın."
         options: { values: [{ name: draft, label: Qaralama }, { name: published, label: Yayımlanmış }] }
-      - { name: body, label: Səhifənin mətni, type: rich-text, required: true, description: "məxfilik və ya istifadə qaydalarının tam mətnidir.", options: { format: markdown, media: media, path: pages, rename: safe } }
+      - { name: body, label: Səhifənin mətni, type: rich-text, required: true, description: "məxfilik və ya istifadə qaydalarının tam mətnidir.", options: { format: markdown, media: media, rename: safe } }

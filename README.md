@@ -36,6 +36,8 @@ VS Code Live Server istifadə edilirsə, `dist/index.html` faylını açın. Lay
 
 CMS Azərbaycan dilindədir və hər sahənin altında nə işə yaradığı yazılıb. Şəkil sahəsində mövcud şəkli görmək, silmək, media kitabxanasından başqasını seçmək və yenisini yükləmək olar. Şəkil təsviri əlçatanlıq və Google üçün vacibdir.
 
+Şəkillər `.pages.yml` daxilində `media` adlı kitabxanaya bağlanır. Yüklənən fayllar `public/media/` qovluğunda saxlanır və saytda `/media/fayl-adi` ünvanı ilə istifadə olunur. Loqolar da bu kitabxanadadır; buna görə CMS onları önizləyə və dəyişə bilir.
+
 Yeni məqalə üçün **Məzmunlar → New** seçin, vacib sahələri doldurun, şəkli və şəklin təsvirini əlavə edin. Ana səhifədə eyni anda 2 “Əsas böyük məqalə” və 4 “Kiçik məqalə kartı” saxlayın. Sıra üçün böyük məqalələrə 1–2, kiçiklərə 3–6 yazın. Hazır məqalənin vəziyyətini **Yayımlanmış** edin.
 
 Ana və Haqqımızda mətnləri, əlaqə məlumatları, loqolar, navbar/footer menyusu, bölmə səhifələri və hüquqi mətnlər CMS-in ayrıca bölmələrindən idarə olunur.

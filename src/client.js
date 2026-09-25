@@ -1,5 +1,90 @@
-const menu=document.querySelector('.menu-toggle'),nav=document.querySelector('#main-nav');if(menu&&nav)menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')==='true';menu.setAttribute('aria-expanded',String(!open));menu.textContent=open?'Menyu':'Bağla';nav.classList.toggle('is-open',!open)});
-const norm=s=>String(s||'').toLocaleLowerCase('az').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-const listing=document.querySelector('[data-listing]');if(listing){const items=[...listing.children],input=document.querySelector('[name=q]'),sort=document.querySelector('[name=sort]'),count=document.querySelector('[data-count]'),empty=document.querySelector('[data-empty]'),params=new URLSearchParams(location.search);if(input)input.value=params.get('q')||'';const active=params.get('category')||'';document.querySelectorAll('[data-category]').forEach(a=>a.setAttribute('aria-current',String(a.dataset.category===active)));const update=()=>{const q=norm(input?.value),cat=active;let shown=items.filter(el=>(!q||norm(el.dataset.search).includes(q))&&(!cat||el.dataset.category===cat));items.forEach(el=>el.hidden=!shown.includes(el));shown.sort((a,b)=>(sort?.value==='old'?1:-1)*a.dataset.date.localeCompare(b.dataset.date)).forEach(el=>listing.append(el));count.textContent=`${shown.length} hekayə`;empty.hidden=shown.length>0};input?.addEventListener('input',update);sort?.addEventListener('change',update);update()}
-const global=document.querySelector('[data-global-search]');if(global){const result=document.querySelector('[data-search-results]'),status=document.querySelector('[data-search-status]');let data=[];fetch('/search-index.json').then(r=>r.json()).then(x=>data=x).catch(()=>status.textContent='Axtarış məlumatını yükləmək mümkün olmadı.');global.addEventListener('input',()=>{const q=norm(global.value);result.innerHTML='';if(q.length<2){status.textContent='Axtarmaq üçün ən azı iki hərf yazın.';return}const found=data.filter(a=>norm(`${a.title} ${a.description} ${a.author} ${a.text}`).includes(q)).slice(0,12);status.textContent=found.length?`${found.length} nəticə tapıldı.`:'Nəticə tapılmadı.';result.innerHTML=found.map(a=>`<a class="card" href="${a.url}"><img src="${a.image}" alt="${a.alt}" loading="lazy" width="700" height="875"><h3>${a.title}</h3><p>${a.description}</p></a>`).join('')})}
-document.querySelector('[data-copy-link]')?.addEventListener('click',async e=>{try{await navigator.clipboard.writeText(location.href);e.currentTarget.textContent='Köçürüldü'}catch{e.currentTarget.textContent='Köçürmək mümkün olmadı'}});
+const fallbackImage = new URL('./media/placeholder.svg', document.currentScript.src).href;
+document.addEventListener('error', event => {
+  const image = event.target;
+  if (image instanceof HTMLImageElement && !image.dataset.fallback) {
+    image.dataset.fallback = 'true';
+    image.closest('picture')?.querySelectorAll('source').forEach(source => source.remove());
+    image.src = fallbackImage;
+  }
+}, true);
+const menu = document.querySelector('.menu-toggle');
+const nav = document.querySelector('#main-nav');
+function closeMenu() {
+  if (!menu || !nav) return;
+  menu.setAttribute('aria-expanded', 'false');
+  menu.textContent = 'Menyu';
+  nav.classList.remove('is-open');
+}
+menu?.addEventListener('click', () => {
+  const open = menu.getAttribute('aria-expanded') === 'true';
+  menu.setAttribute('aria-expanded', String(!open));
+  menu.textContent = open ? 'Menyu' : 'Bağla';
+  nav?.classList.toggle('is-open', !open);
+});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && menu?.getAttribute('aria-expanded') === 'true') {
+    closeMenu();
+    menu.focus();
+  }
+});
+nav?.addEventListener('click', event => { if (event.target.closest('a')) closeMenu(); });
+matchMedia('(min-width:768px)').addEventListener('change', closeMenu);
+const norm = value => String(value || '').toLocaleLowerCase('az').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+const listing = document.querySelector('[data-listing]');
+if (listing) {
+  const items = [...listing.children];
+  const input = document.querySelector('[name=q]');
+  const sort = document.querySelector('[name=sort]');
+  const params = new URLSearchParams(location.search);
+  if (input) input.value = params.get('q') || '';
+  if (sort) sort.value = params.get('sort') === 'old' ? 'old' : 'new';
+  const category = params.get('category') || '';
+  const update = () => {
+    const shown = items.filter(el => (!norm(input?.value) || norm(el.dataset.search).includes(norm(input.value))) && (!category || el.dataset.category === category));
+    items.forEach(el => { el.hidden = !shown.includes(el); });
+    shown.sort((a,b) => (sort?.value === 'old' ? 1 : -1) * a.dataset.date.localeCompare(b.dataset.date)).forEach(el => listing.append(el));
+    document.querySelector('[data-count]').textContent = `${shown.length} məzmun`;
+    document.querySelector('[data-empty]').hidden = shown.length > 0;
+  };
+  input?.addEventListener('input', update);
+  sort?.addEventListener('change', update);
+  input?.form?.addEventListener('submit', event => { event.preventDefault(); update(); });
+  update();
+}
+const search = document.querySelector('[data-global-search]');
+if (search) {
+  const results = document.querySelector('[data-search-results]');
+  const status = document.querySelector('[data-search-status]');
+  let data = null;
+  const render = () => {
+    results.replaceChildren();
+    const query = norm(search.value).trim();
+    if (query.length < 2) { status.textContent = 'Axtarmaq üçün ən azı iki hərf yazın.'; return; }
+    if (!data) { status.textContent = 'Məlumatlar yüklənir…'; return; }
+    const found = data.filter(a => norm(`${a.title} ${a.description} ${a.author} ${a.text}`).includes(query));
+    status.textContent = found.length ? `${found.length} nəticə tapıldı.` : 'Nəticə tapılmadı.';
+    for (const article of found) {
+      const link = document.createElement('a');
+      link.className = 'card';
+      link.href = article.url;
+      const picture = document.createElement('picture');
+      const img = document.createElement('img');
+      img.src = article.image; img.alt = article.alt || ''; img.loading = 'lazy';
+      img.width = 480; img.height = 360;
+      picture.append(img);
+      const heading = document.createElement('h3'); heading.textContent = article.title;
+      const description = document.createElement('p'); description.textContent = article.description;
+      link.append(picture, heading, description);
+      results.append(link);
+    }
+  };
+  search.addEventListener('input', render);
+  fetch('/search-index.json').then(response => { if (!response.ok) throw new Error('Search index'); return response.json(); })
+    .then(value => { data = value; render(); })
+    .catch(() => { status.textContent = 'Axtarış məlumatını yükləmək mümkün olmadı. Səhifəni yeniləyin.'; });
+}
+document.querySelector('[data-copy-link]')?.addEventListener('click', async event => {
+  const button = event.currentTarget;
+  try { await navigator.clipboard.writeText(location.href); button.textContent = 'Köçürüldü'; }
+  catch { button.textContent = 'Keçidi ünvan sətrindən köçürün'; }
+});
