@@ -31,6 +31,7 @@ content:
     type: collection
     path: content/articles
     format: yaml-frontmatter
+    exclude: [.gitkeep]
     filename: { template: "{title}.md", field: true }
     description: "saytdakı məqalələri yaradın, şəkillərini dəyişin, ana səhifədə yerini seçin və yayımlayın."
     view:
