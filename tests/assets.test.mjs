@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, readdir, access } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { parseHTML } from 'linkedom';
 import YAML from 'yaml';
@@ -35,4 +36,13 @@ test('Generated internal links and all image variants exist', async () => {
     assert.equal(d.querySelectorAll('main h1').length,1,file);
     for(const img of d.querySelectorAll('img')) assert.ok(img.hasAttribute('alt'),file);
   }
+});
+
+test('Google üçün crawl edilə bilən favicon faylları yaradılır', async () => {
+  for (const file of ['favicon.svg', 'favicon-96.png', 'apple-touch-icon.png']) {
+    assert.equal(existsSync(path.join('dist', file)), true, `${file} yaradılmayıb`);
+  }
+  const home = await readFile(path.join('dist', 'index.html'), 'utf8');
+  assert.match(home, /rel="icon" type="image\/svg\+xml" href="\/favicon\.svg"/);
+  assert.match(home, /rel="icon" type="image\/png" sizes="96x96" href="\/favicon-96\.png"/);
 });
