@@ -5,7 +5,7 @@ description: İşıq, material və boşluğun bir araya gələrək gündəlik h�
 author: I’NAZ redaksiyası
 date: 2026-09-18
 category: Mədəniyyət
-image: /media/architecture.jpg
+image: /media/img9066jpg.jpeg
 image_alt: Kölgələrin düşdüyü həndəsi beton səth
 photo_credit: Simeon Galabov / Pexels
 background: "#e6e7e4"
