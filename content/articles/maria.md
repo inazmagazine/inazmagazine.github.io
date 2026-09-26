@@ -72,4 +72,6 @@ Məryəm Novruzinin karyera xətti yaradıcılıq və mediadan başlayaraq kommu
 
 
 
-Bu gün Məryəm Novruzi fəaliyyətini London mərkəzli beynəlxalq biznes mühitində davam etdirərək kommunikasiya bacarıqlarını biznes inkişafı və strateji əlaqələrlə birləşdirir. Onun yanaşmasının mərkəzində müxtəlif ölkələr, şirkətlər və insanlar arasında uzunmüddətli əlaqələrin qurulması, yeni bazar imkanlarının müəyyənləşdirilməsi və bu imkanların real əməkdaşlıqlara çevrilməsi dayanır. Yaradıcılıqdan beynəlxalq biznesə qədər uzanan fəaliyyəti isə onun karyerasını yalnız bir sahə ilə məhdudlaşdırmadan, media, mədəniyyət, kommunikasiya və biznesin kəsişməsində formalaşdırmasına imkan verir
+Bu gün Məryəm Novruzi fəaliyyətini London mərkəzli beynəlxalq biznes mühitində davam etdirərək kommunikasiya bacarıqlarını biznes inkişafı və strateji əlaqələrlə birləşdirir. Onun yanaşmasının mərkəzində müxtəlif ölkələr, şirkətlər və insanlar arasında uzunmüddətli əlaqələrin qurulması, yeni bazar imkanlarının müəyyənləşdirilməsi və bu imkanların real əməkdaşlıqlara çevrilməsi dayanır. Yaradıcılıqdan beynəlxalq biznesə qədər uzanan fəaliyyəti isə onun karyerasını yalnız bir sahə ilə məhdudlaşdırmadan, media, mədəniyyət, kommunikasiya və biznesin kəsişməsində formalaşdırmasına imkan verir.
+
+@novruzimaria
