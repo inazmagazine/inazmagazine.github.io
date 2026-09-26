@@ -3,7 +3,7 @@ title: Sevda Məmmədova
 description: "“Qadınlar üzrə birinci”: Sevda Məmmədovanın inkişaf strategiyası"
 author: I’NAZ redaksiyası
 date: 2026-09-26
-category: Peşəkarlar
+category: Həyat tərzi
 image: /media/sevdamemmedovapng.jpg
 image_alt: Sevda Məmmədova
 home_section: small
@@ -11,6 +11,7 @@ background: "#7C7B7B"
 text_color: white
 partner: false
 status: published
+archive: false
 ---
  “Əgər məndən missiyamın nə olduğunu soruşsalar, cavabım çox sadə olar: qadınlara öz güclərini xatırlatmaq və bu gücü real nəticələrə çevirməyin yolunu göstərmək. İstəyirəm ki, hər bir qadın öz adını, mövqeyini və həyatını müstəqil şəkildə formalaşdıra biləcəyini bilsin.”
 
