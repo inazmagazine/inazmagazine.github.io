@@ -136,6 +136,178 @@ content:
         fields:
           - { name: mission_title, label: Başlıq, type: string, required: true, description: "ana səhifədə I’NAZ haqqında hissəsinin iri başlığıdır." }
 
+  - name: design
+    label: Dizayn ayarları
+    type: file
+    path: content/data/design.yml
+    description: rəng və şriftlər bütün saytda yenilənir. Dəyişiklikdən sonra GitHub
+      Actions build və deploy tamamlanmasını gözləyin.
+    fields:
+      - name: primary
+        label: Əsas rəng
+        type: string
+        description: "#RRGGBB formatında yazın. Avtomatik palitra aktivdirsə, digər
+          rənglər bu rəngdən hesablanır. Boş və yanlış dəyərdə mövcud qəhvəyi
+          görünüş qorunur."
+        pattern:
+          regex: ^(#[0-9a-fA-F]{6})?$
+          message: "rəngi #RRGGBB formatında yazın və ya boş saxlayın."
+      - name: automatic
+        label: Avtomatik palitra istifadə et
+        type: boolean
+        description: aktiv olduqda əsas rəngdən uyğun fon, mətn və digər tonlar yaranır.
+          Söndürüləndə qəhvəyi palitra istifadə edilir.
+      - name: custom_enabled
+        label: Fərdi rəngləri aktiv et
+        type: boolean
+        description: aktiv etdikdə aşağıdakı etibarlı fərdi rənglər palitranı əvəz edir.
+          Söndürdükdə fərdi dəyərlər saxlanır, amma tətbiq edilmir.
+      - name: colors
+        label: Fərdi rənglər
+        type: object
+        description: boş sahə avtomatik rəngə qayıdır. Mətn və fonu ayrıca dəyişdikdə
+          oxunaqlılığı yoxlayın.
+        fields:
+          - name: background
+            label: Səhifənin əsas fonu — boş saxlanarsa avtomatik
+            type: string
+            description: "#RRGGBB formatı, məsələn #411D0B. Boş saxlanarsa avtomatik rəng
+              işləyir; yanlış dəyər default rəngə qayıdır."
+            pattern:
+              regex: ^(#[0-9a-fA-F]{6})?$
+              message: "rəngi #RRGGBB formatında yazın və ya boş saxlayın."
+          - name: header
+            label: Header fonu — boş saxlanarsa avtomatik
+            type: string
+            description: "#RRGGBB formatı, məsələn #411D0B. Boş saxlanarsa avtomatik rəng
+              işləyir; yanlış dəyər default rəngə qayıdır."
+            pattern:
+              regex: ^(#[0-9a-fA-F]{6})?$
+              message: "rəngi #RRGGBB formatında yazın və ya boş saxlayın."
+          - name: footer
+            label: Footer fonu — boş saxlanarsa avtomatik
+            type: string
+            description: "#RRGGBB formatı, məsələn #411D0B. Boş saxlanarsa avtomatik rəng
+              işləyir; yanlış dəyər default rəngə qayıdır."
+            pattern:
+              regex: ^(#[0-9a-fA-F]{6})?$
+              message: "rəngi #RRGGBB formatında yazın və ya boş saxlayın."
+          - name: text
+            label: Əsas mətn — boş saxlanarsa avtomatik
+            type: string
+            description: "#RRGGBB formatı, məsələn #411D0B. Boş saxlanarsa avtomatik rəng
+              işləyir; yanlış dəyər default rəngə qayıdır."
+            pattern:
+              regex: ^(#[0-9a-fA-F]{6})?$
+              message: "rəngi #RRGGBB formatında yazın və ya boş saxlayın."
+          - name: heading
+            label: Başlıqlar — boş saxlanarsa avtomatik
+            type: string
+            description: "#RRGGBB formatı, məsələn #411D0B. Boş saxlanarsa avtomatik rəng
+              işləyir; yanlış dəyər default rəngə qayıdır."
+            pattern:
+              regex: ^(#[0-9a-fA-F]{6})?$
+              message: "rəngi #RRGGBB formatında yazın və ya boş saxlayın."
+          - name: footer_text
+            label: Footer mətn rəngi — boş saxlanarsa avtomatik
+            type: string
+            description: "#RRGGBB formatı, məsələn #411D0B. Boş saxlanarsa avtomatik rəng
+              işləyir; yanlış dəyər default rəngə qayıdır."
+            pattern:
+              regex: ^(#[0-9a-fA-F]{6})?$
+              message: "rəngi #RRGGBB formatında yazın və ya boş saxlayın."
+          - name: surface
+            label: Kart və surface fonu — boş saxlanarsa avtomatik
+            type: string
+            description: "#RRGGBB formatı, məsələn #411D0B. Boş saxlanarsa avtomatik rəng
+              işləyir; yanlış dəyər default rəngə qayıdır."
+            pattern:
+              regex: ^(#[0-9a-fA-F]{6})?$
+              message: "rəngi #RRGGBB formatında yazın və ya boş saxlayın."
+          - name: accent
+            label: Accent və seçilmiş elementlər — boş saxlanarsa avtomatik
+            type: string
+            description: "#RRGGBB formatı, məsələn #411D0B. Boş saxlanarsa avtomatik rəng
+              işləyir; yanlış dəyər default rəngə qayıdır."
+            pattern:
+              regex: ^(#[0-9a-fA-F]{6})?$
+              message: "rəngi #RRGGBB formatında yazın və ya boş saxlayın."
+          - name: link
+            label: Link rəngi — boş saxlanarsa avtomatik
+            type: string
+            description: "#RRGGBB formatı, məsələn #411D0B. Boş saxlanarsa avtomatik rəng
+              işləyir; yanlış dəyər default rəngə qayıdır."
+            pattern:
+              regex: ^(#[0-9a-fA-F]{6})?$
+              message: "rəngi #RRGGBB formatında yazın və ya boş saxlayın."
+          - name: border
+            label: Border rəngi — boş saxlanarsa avtomatik
+            type: string
+            description: "#RRGGBB formatı, məsələn #411D0B. Boş saxlanarsa avtomatik rəng
+              işləyir; yanlış dəyər default rəngə qayıdır."
+            pattern:
+              regex: ^(#[0-9a-fA-F]{6})?$
+              message: "rəngi #RRGGBB formatında yazın və ya boş saxlayın."
+      - name: fonts
+        label: Şriftlər
+        type: object
+        description: >-
+          yalnız istifadə edilən ailələr lokal WOFF2 kimi yüklənir. Bütün
+          seçimlər lokal rəsmi fontlardır. Default: mətn və navbar Manrope, başlıqlar Cormorant, kiçik kateqoriya yazıları Noto Sans. Manrope böyük Ə hərfini dəstəkləmədiyindən bu kiçik yazılarda seçilsə də bütöv Noto Sans istifadə edilir.
+        fields:
+          - name: body
+            label: Əsas mətn şrifti
+            type: select
+            description: paraqraflar və əsas interfeys mətnləri. Tanınmayan və boş seçimdə
+              default şrift istifadə edilir.
+            options:
+              values:
+                - Manrope
+                - Cormorant
+                - Josefin Sans
+                - Noto Sans
+                - Source Sans 3
+                - Lora
+          - name: heading
+            label: Başlıq şrifti
+            type: select
+            description: iri başlıqlar və sitatlar. Tanınmayan və boş seçimdə default şrift
+              istifadə edilir.
+            options:
+              values:
+                - Manrope
+                - Cormorant
+                - Josefin Sans
+                - Noto Sans
+                - Source Sans 3
+                - Lora
+          - name: eyebrow
+            label: Kiçik kateqoriya başlıqları
+            type: select
+            description: Peşəkarlar, Mədəniyyət kimi eyebrow və kateqoriya yazıları.
+              Tanınmayan və boş seçimdə default şrift istifadə edilir.
+            options:
+              values:
+                - Manrope
+                - Cormorant
+                - Josefin Sans
+                - Noto Sans
+                - Source Sans 3
+                - Lora
+          - name: navigation
+            label: Naviqasiya şrifti
+            type: select
+            description: yuxarı menyudakı keçidlər. Tanınmayan və boş seçimdə default şrift
+              istifadə edilir.
+            options:
+              values:
+                - Manrope
+                - Cormorant
+                - Josefin Sans
+                - Noto Sans
+                - Source Sans 3
+                - Lora
+
   - name: site_settings
     label: Sayt və əlaqə məlumatları
     type: file

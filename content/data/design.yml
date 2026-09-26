@@ -1,0 +1,20 @@
+# Mövcud qəhvəyi görünüş qorunur. Başqa əsas rəng seçəndə palitra yenilənir.
+primary: '#411D0B'
+automatic: true
+custom_enabled: false
+colors:
+  background: ''
+  header: ''
+  footer: ''
+  text: ''
+  heading: ''
+  footer_text: ''
+  surface: ''
+  accent: ''
+  link: ''
+  border: ''
+fonts:
+  body: Manrope
+  heading: Cormorant
+  eyebrow: Noto Sans
+  navigation: Manrope

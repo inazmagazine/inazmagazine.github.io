@@ -1,6 +1,7 @@
 node_modules/
 dist/
 .cache/
+.tmp/
 .sites-runtime/
 .env
 .env.*

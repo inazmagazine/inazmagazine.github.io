@@ -6,6 +6,7 @@ import YAML from 'yaml';
 import MarkdownIt from 'markdown-it';
 import sanitizeHtml from 'sanitize-html';
 import sharp from 'sharp';
+import {createTheme,themeCss,FONT_CHOICES,contrastText} from './theme.mjs';
 
 const md = new MarkdownIt({ html: false, linkify: true, typographer: true });
 const root = process.cwd();
@@ -25,6 +26,12 @@ async function collection(dir) {
 }
 
 const site=await readYaml('content/data/site.yml');
+// An optional design file must never break publishing when removed or malformed.
+let design={};
+try { design=YAML.parse(await readFile(process.env.INAZ_DESIGN_FILE||'content/data/design.yml','utf8'))||{}; }
+catch(error) { if(error.code!=='ENOENT')console.warn('Dizayn ayarları oxunmadı; default palitra istifadə olunur.'); }
+const theme=createTheme(design);
+const styleSource=themeCss(theme)+await readFile('src/styles.css','utf8');
 const siteOrigin=process.env.SITE_URL||site.base_url;
 const nav=(await readYaml('content/data/navigation.yml')).filter(x=>x.active).sort((a,b)=>a.order-b.order);
 const categories=(await readYaml('content/data/categories.yml')).filter(x=>x.active).sort((a,b)=>a.order-b.order);
@@ -34,13 +41,12 @@ const pages=await collection('pages');
 const aboutText=await readMarkdownBody('haqqinda.md');
 const missionText=await readMarkdownBody('cumle.md');
 
-await rm(out,{recursive:true,force:true});await mkdir(out,{recursive:true});await cp('public',out,{recursive:true});await cp('src/styles.css',path.join(out,'styles.css'));
+await rm(out,{recursive:true,force:true});await mkdir(out,{recursive:true});await cp('public',out,{recursive:true});await writeFile(path.join(out,'styles.css'),styleSource);
 await sharp(path.join(root,'public','favicon.svg')).resize(96,96).png().toFile(path.join(out,'favicon-96.png'));
 await sharp(path.join(root,'public','favicon.svg')).resize(180,180).png().toFile(path.join(out,'apple-touch-icon.png'));
 const clientSource=(await readFile('src/client.js','utf8')).replace("fetch('/search-index.json')",`fetch('${basePath}/search-index.json')`);await writeFile(path.join(out,'client.js'),clientSource);
 await mkdir(path.join(out,'fonts'),{recursive:true});
-for(const [src,dst] of [['cormorant-latin-wght-normal.woff2','cormorant-latin.woff2'],['cormorant-latin-ext-wght-normal.woff2','cormorant-latin-ext.woff2']])await cp(path.join('node_modules/@fontsource-variable/cormorant/files',src),path.join(out,'fonts',dst));
-for(const [src,dst] of [['manrope-latin-wght-normal.woff2','manrope-latin.woff2'],['manrope-latin-ext-wght-normal.woff2','manrope-latin-ext.woff2']])await cp(path.join('node_modules/@fontsource-variable/manrope/files',src),path.join(out,'fonts',dst));
+for(const name of new Set(Object.values(theme.fonts)))for(const file of FONT_CHOICES[name].files)await cp(path.join('assets/fonts',file),path.join(out,'fonts',file));
 // Logos live in public/media so Pages CMS can preview and replace them.
 const localMedia = src => typeof src === 'string' && src.startsWith('/media/') && !src.includes('..') && existsSync(path.join(root,'public',src.slice(1)));
 for (const [file,original] of [['logo-light.png','logowhite.PNG'],['logo-dark.png','logoblack.PNG']]) {
@@ -55,11 +61,11 @@ const optimized=new Map();await mkdir(path.join(out,'media','optimized'),{recurs
 for(const src of [...new Set(articles.flatMap(a=>[a.image,...(a.gallery||[]).map(g=>g.image)]).filter(Boolean))]){const input=path.join(root,'public',src.replace(/^\//,''));try{const meta=await sharp(input).metadata();const key=createHash('sha256').update(src).digest('hex').slice(0,16);const variants=[];for(const width of [480,900,1400]){if(meta.width&&width>meta.width&&variants.length)continue;await sharp(input).resize({width,withoutEnlargement:true}).webp({quality:80,effort:5}).toFile(path.join(out,'media','optimized',`${key}-${width}.webp`));variants.push({width:Math.min(width,meta.width||width),url:`/media/optimized/${key}-${width}.webp`});}optimized.set(src,{variants,width:meta.width||1400,height:meta.height||1000});}catch(error){console.warn(`Şəkil optimallaşdırılmadı: ${src}: ${error.message}`)}}
 const image=(src,alt='',eager=false,cls='',sizes='(max-width:720px) 100vw, 50vw')=>{src=mediaUrl(src);const data=optimized.get(src);const attrs=`${eager?'fetchpriority="high"':'loading="lazy"'} decoding="async"`;if(!data)return`<picture><img class="${cls}" src="${esc(src)}" alt="${esc(alt)}" ${attrs} width="1200" height="900"></picture>`;return`<picture><source type="image/webp" srcset="${data.variants.map(x=>`${x.url} ${x.width}w`).join(', ')}" sizes="${sizes}"><img class="${cls}" src="${esc(src)}" alt="${esc(alt)}" ${attrs} width="${data.width}" height="${data.height}"></picture>`};
 const card=(a,compact=false)=>`<a class="card ${compact?'card-compact':''}" href="/mezmunlar/${a.slug}/">${image(a.image,a.image_alt,false,'',compact?'(max-width:720px) 50vw, 25vw':'(max-width:720px) 100vw, 33vw')}<span class="card-category">${esc(a.category)}</span><h3>${esc(a.title)}</h3>${compact?'':`<p>${esc(a.description)}</p>`}<time datetime="${a.date}">${fmtDate(a.date)}</time></a>`;
-const brand=()=>`<a class="brand" href="/" aria-label="I’NAZ ana səhifə"><img src="${site.logo_light}" alt="I’NAZ — ${esc(site.credit)}" width="520" height="180"></a>`;
+const brand=(isFooter=false)=>`<a class="brand" href="/" aria-label="I’NAZ ana səhifə"><img src="${contrastText(theme.colors[isFooter?'footer':'header'])==='#ffffff'?site.logo_light:site.logo_dark}" alt="I’NAZ — ${esc(site.credit)}" width="520" height="180"></a>`;
 const header=current=>`<a class="skip" href="#main">Əsas məzmuna keç</a><header class="site-header"><div class="wrap masthead"><span class="masthead-note">Dəb, həyat tərzi və mədəniyyət jurnalı</span>${brand()}<a class="header-search" href="/axtaris/" aria-label="Saytda axtarış">Axtarış</a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menyu</button></div><nav class="navigation wrap" id="main-nav" aria-label="Əsas naviqasiya">${nav.map(n=>`<a href="${n.url}" ${current===n.url?'aria-current="page"':''}>${esc(n.label)}</a>`).join('')}</nav></header>`;
 const footer=()=>`<footer class="site-footer"><div class="wrap footer-main"><div class="footer-brand">${brand(true)}</div><div><h2 class="footer-heading">Bölmələr</h2><nav class="footer-links">${nav.map(n=>`<a href="${n.url}">${esc(n.label)}</a>`).join('')}</nav></div><div><h2 class="footer-heading">Əlaqə</h2><div class="footer-links"><a href="mailto:${site.email}">${site.email}</a><a href="tel:${site.phone.replace(/\s/g,'')}">${site.phone}</a><a href="${site.instagram}" target="_blank" rel="noopener noreferrer">Instagram</a><a href="${site.whatsapp}" target="_blank" rel="noopener noreferrer">WhatsApp</a></div></div></div><div class="wrap footer-bottom"><span>© ${new Date().getFullYear()} I’NAZ. Bütün hüquqlar qorunur.</span><nav><a href="/mexfilik/">Məxfilik siyasəti</a><a href="/istifade-qaydalari/">İstifadə qaydaları</a></nav></div></footer>`;
-const assetVersion=createHash('sha256').update(await readFile('src/styles.css')).update(clientSource).digest('hex').slice(0,12);
-const doc=({title,description,body,current='',extra='',canonical='/'})=>`<!doctype html><html lang="az"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)}</title><meta name="description" content="${esc(description)}"><link rel="canonical" href="${site.base_url}${canonical}"><meta property="og:type" content="website"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${site.base_url}${canonical}"><meta name="theme-color" content="#411D0B"><meta name="twitter:card" content="summary_large_image"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="stylesheet" href="/styles.css?v=${assetVersion}">${extra}</head><body>${header(current)}<main id="main">${body}</main>${footer()}<script src="/client.js?v=${assetVersion}" defer></script></body></html>`;
+const assetVersion=createHash('sha256').update(styleSource).update(clientSource).digest('hex').slice(0,12);
+const doc=({title,description,body,current='',extra='',canonical='/'})=>`<!doctype html><html lang="az"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)}</title><meta name="description" content="${esc(description)}"><link rel="canonical" href="${site.base_url}${canonical}"><meta property="og:type" content="website"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${site.base_url}${canonical}"><meta name="theme-color" content="${theme.colors.background}"><meta name="twitter:card" content="summary_large_image"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="stylesheet" href="/styles.css?v=${assetVersion}">${extra}</head><body>${header(current)}<main id="main">${body}</main>${footer()}<script src="/client.js?v=${assetVersion}" defer></script></body></html>`;
 const prefixHtml=html=>{let result=html.replaceAll(site.base_url,`${siteOrigin}${basePath}`);if(basePath)result=result.replace(/\b(href|src|srcset)="\/(?!\/)/g,`$1="${basePath}/`).replace(/, \/media\//g,`, ${basePath}/media/`);return result};
 async function writeRoute(route,html){const folder=path.join(out,route);await mkdir(folder,{recursive:true});await writeFile(path.join(folder,'index.html'),prefixHtml(html));}
 

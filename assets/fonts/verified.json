@@ -1,0 +1,167 @@
+{
+  "cormorant": {
+    "characters": "əƏğĞşŞıİçÇöÖüÜ",
+    "files": [
+      {
+        "file": "cormorant-latin.woff2",
+        "sha256": "766e1b19fa74895763cef708f4b360b887e5a836725869ca672a0753bf19bd53",
+        "weights": [
+          [
+            300,
+            700
+          ]
+        ]
+      },
+      {
+        "file": "cormorant-latin-ext.woff2",
+        "sha256": "aeb47ae07faf841b22e87a63f6c23b5dd0aba805798a99eb5825895d89371602",
+        "weights": [
+          [
+            300,
+            700
+          ]
+        ]
+      }
+    ],
+    "source": "Fontsource 5.3.0 / Google Fonts; OFL-1.1",
+    "coverage": true
+  },
+  "manrope": {
+    "characters": "əğĞşŞıİçÇöÖüÜ",
+    "missing": [
+      "Ə"
+    ],
+    "coverage": false,
+    "source": "Official Fontsource Manrope 5.3.0; legacy body/navigation only",
+    "files": [
+      {
+        "file": "manrope-latin.woff2",
+        "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972",
+        "weights": [
+          [
+            200,
+            800
+          ]
+        ]
+      },
+      {
+        "file": "manrope-latin-ext.woff2",
+        "sha256": "3911b66d9f2e005a4b989223405d0e5032619c668597ba467cc76a23c8fffcfb",
+        "weights": [
+          [
+            200,
+            800
+          ]
+        ]
+      }
+    ]
+  },
+  "josefin-sans": {
+    "characters": "əƏğĞşŞıİçÇöÖüÜ",
+    "files": [
+      {
+        "file": "josefin-sans-latin.woff2",
+        "sha256": "21efe1559a026f9ad7f880772917faa3a621186688e8e79e0568e4308c0bafa9",
+        "weights": [
+          [
+            100,
+            700
+          ]
+        ]
+      },
+      {
+        "file": "josefin-sans-latin-ext.woff2",
+        "sha256": "e9dfe6f6288f73d10e1b3c9ef920f74411f8cf442515b71fc5c2ed5517c14ff7",
+        "weights": [
+          [
+            100,
+            700
+          ]
+        ]
+      }
+    ],
+    "source": "Fontsource 5.3.0 / Google Fonts; OFL-1.1",
+    "coverage": true
+  },
+  "noto-sans": {
+    "characters": "əƏğĞşŞıİçÇöÖüÜ",
+    "files": [
+      {
+        "file": "noto-sans-latin.woff2",
+        "sha256": "51ca196f49a33e79e7870ff88ebd2829a3f627a51e7d690986618f0e7ad2b52d",
+        "weights": [
+          [
+            100,
+            900
+          ]
+        ]
+      },
+      {
+        "file": "noto-sans-latin-ext.woff2",
+        "sha256": "6d5a79315528df191b9d86f97b0c4272a8b588fcb166773fe6588ac795de0613",
+        "weights": [
+          [
+            100,
+            900
+          ]
+        ]
+      }
+    ],
+    "source": "Fontsource 5.3.0 / Google Fonts; OFL-1.1",
+    "coverage": true
+  },
+  "source-sans-3": {
+    "characters": "əƏğĞşŞıİçÇöÖüÜ",
+    "files": [
+      {
+        "file": "source-sans-3-latin.woff2",
+        "sha256": "7a19a7027e125257d310c6dbd78ae3a30b5ea1e3794d60b12bb28227a003bfda",
+        "weights": [
+          [
+            200,
+            900
+          ]
+        ]
+      },
+      {
+        "file": "source-sans-3-latin-ext.woff2",
+        "sha256": "a85a7459bdb3cdc1136751e151a506bae653fc29ada3ca86237477df6f1b59e6",
+        "weights": [
+          [
+            200,
+            900
+          ]
+        ]
+      }
+    ],
+    "source": "Fontsource 5.3.0 / Google Fonts; OFL-1.1",
+    "coverage": true
+  },
+  "lora": {
+    "characters": "əƏğĞşŞıİçÇöÖüÜ",
+    "files": [
+      {
+        "file": "lora-latin.woff2",
+        "sha256": "ddb8c66035104e233fc024669183aad3738b6daa16deee2ebb1241bd0f98ace1",
+        "weights": [
+          [
+            400,
+            700
+          ]
+        ]
+      },
+      {
+        "file": "lora-latin-ext.woff2",
+        "sha256": "2a2d9c22c9863086a23f5013fede1428585321812b25f2662542c39d02967c5e",
+        "weights": [
+          [
+            400,
+            700
+          ]
+        ]
+      }
+    ],
+    "source": "Fontsource 5.3.0 / Google Fonts; OFL-1.1",
+    "coverage": true
+  }
+}
