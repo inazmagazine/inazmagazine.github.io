@@ -1,25 +1,30 @@
 - name: Dəb
   slug: deb
-  description: "Dəb, gözəllik, üslub və yaradıcı yanaşmalar haqqında məqalələr."
+  description: Dəb, gözəllik, üslub və yaradıcı yanaşmalar haqqında məqalələr.
   order: 1
   active: true
 - name: Həyat tərzi
   slug: heyat-terzi
-  description: "Gündəlik yaşam, məkan, səyahət və rifah mövzularında məzmunlar."
+  description: Gündəlik yaşam, məkan, səyahət və rifah mövzularında məzmunlar.
   order: 2
   active: true
 - name: Peşəkarlar
   slug: pesekarlar
-  description: "Öz sahəsində fərqlənən peşəkarların işi, təcrübəsi və hekayələri."
+  description: Öz sahəsində fərqlənən peşəkarların işi, təcrübəsi və hekayələri.
   order: 3
   active: true
 - name: Brendlər
   slug: brendler
-  description: "Yerli və beynəlxalq brendlər, layihələr və sahibkarlıq hekayələri."
+  description: Yerli və beynəlxalq brendlər, layihələr və sahibkarlıq hekayələri.
   order: 4
   active: true
 - name: Mədəniyyət
   slug: medeniyyet
-  description: "İncəsənət, memarlıq, yaradıcılıq və mədəni həyat haqqında yazılar."
+  description: İncəsənət, memarlıq, yaradıcılıq və mədəni həyat haqqında yazılar.
   order: 5
+  active: true
+- name: Biznes
+  slug: biznes
+  description: biznes, sahibkarlıq, kommersiya, işgüzar fəaliyyət, şirkət, müəssisə
+  order: 6
   active: true
