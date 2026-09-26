@@ -4,7 +4,7 @@ description: "Bakıda başlayan moda hekayəsi: Leyli Zalova beynəlxalq səhnə
 author: I‘NAZ redaksiyası
 date: 2026-09-26
 category: Peşəkarlar
-image: /media/leylizalovapng.jpg
+image: /media/img7999.jpeg
 image_alt: Leyli Zalova
 home_section: main
 background: "#9A91B3"
