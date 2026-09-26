@@ -75,6 +75,7 @@ if (search) {
       const heading = document.createElement('h3'); heading.textContent = article.title;
       const description = document.createElement('p'); description.textContent = article.description;
       link.append(picture, heading, description);
+      if(article.archive){const badge=document.createElement('span');badge.className='archive-badge';badge.textContent='Arxiv';link.append(badge);}
       results.append(link);
     }
   };
@@ -87,4 +88,15 @@ document.querySelector('[data-copy-link]')?.addEventListener('click', async even
   const button = event.currentTarget;
   try { await navigator.clipboard.writeText(location.href); button.textContent = 'Köçürüldü'; }
   catch { button.textContent = 'Keçidi ünvan sətrindən köçürün'; }
+});
+
+document.querySelectorAll('.archive-toggle').forEach(button => {
+ button.addEventListener('click', () => {
+  const expanded=button.getAttribute('aria-expanded')!=='true';
+  const panel=document.getElementById(button.getAttribute('aria-controls'));
+  if(!panel)return;
+  panel.hidden=!expanded;button.setAttribute('aria-expanded',String(expanded));
+  button.querySelector('[data-archive-label]').textContent=expanded?button.dataset.closeLabel:button.dataset.openLabel;
+  button.querySelector('[data-archive-arrow]').textContent=expanded?'↑':'↓';
+ });
 });

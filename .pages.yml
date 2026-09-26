@@ -26,6 +26,16 @@ components:
         options: { media: media, extensions: [jpg, jpeg, png, webp, avif], rename: safe }
 
 content:
+  - name: archive_settings
+    label: Arxiv ayarları
+    type: file
+    path: content/data/archive.yml
+    fields:
+      - { name: enabled, label: Arxiv bölməsini göstər, type: boolean, default: true }
+      - { name: title, label: Bölmənin başlığı, type: string, default: Əvvəlki məzmunlar }
+      - { name: initial_count, label: İlkin məqalə sayı, type: select, default: "3", options: { values: ["2", "3"] } }
+      - { name: open_label, label: Açma düyməsinin mətni, type: string, default: Daha çox məzmun }
+      - { name: close_label, label: Bağlama düyməsinin mətni, type: string, default: Arxivi bağla }
   - name: articles
     label: Məzmunlar
     type: collection
@@ -96,6 +106,7 @@ content:
             - { name: black, label: Tünd }
             - { name: white, label: Ağ }
       - { name: partner, label: Tərəfdaş materialıdır, type: boolean, description: "aktiv olduqda məqalədə tərəfdaş materialı qeydi göstərilir." }
+      - { name: archive, label: Arxivə göndər, type: boolean, default: false, description: "Bu seçim aktiv olduqda məqalə silinmir. Əsas məzmun siyahısından çıxaraq Əvvəlki məzmunlar bölməsində göstərilir." }
       - name: status
         label: Yayımlanma vəziyyəti
         type: select
