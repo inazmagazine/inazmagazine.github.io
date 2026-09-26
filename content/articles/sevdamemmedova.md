@@ -12,7 +12,7 @@ text_color: white
 partner: false
 status: published
 ---
-**** “Əgər məndən missiyamın nə olduğunu soruşsalar, cavabım çox sadə olar: qadınlara öz güclərini xatırlatmaq və bu gücü real nəticələrə çevirməyin yolunu göstərmək. İstəyirəm ki, hər bir qadın öz adını, mövqeyini və həyatını müstəqil şəkildə formalaşdıra biləcəyini bilsin.”
+ “Əgər məndən missiyamın nə olduğunu soruşsalar, cavabım çox sadə olar: qadınlara öz güclərini xatırlatmaq və bu gücü real nəticələrə çevirməyin yolunu göstərmək. İstəyirəm ki, hər bir qadın öz adını, mövqeyini və həyatını müstəqil şəkildə formalaşdıra biləcəyini bilsin.”
 
 Sevda Məmmədova bu gün Azərbaycanda qadınların inkişafı, şəxsi brendinq, biznes və rəqəmsal sahələri vahid istiqamətdə birləşdirən simalardan biri kimi fəaliyyət göstərir. Onun peşəkar mövqeyini ifadə edən əsas konsepsiya isə konkretdir: **“Qadınlar üzrə birinci.”**
 
