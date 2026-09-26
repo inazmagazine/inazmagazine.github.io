@@ -6,7 +6,7 @@ date: 2026-09-26
 category: Peşəkarlar
 image: /media/img7999.jpeg
 image_alt: Leyli Zalova
-home_section: main
+home_section: small
 background: "#9A91B3"
 text_color: white
 partner: false
