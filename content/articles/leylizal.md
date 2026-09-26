@@ -15,7 +15,7 @@ seo:
   seo_title: Leyli Zalova
   seo_description: "Bakıda başlayan moda hekayəsi: Leyli Zalova beynəlxalq səhnəyə necə çıxdı?"
 ---
-Azərbaycan moda sənayesində özünəməxsus üslubu və yaradıcı yanaşması ilə seçilən **Leyli Zalova** son illərdə həm yerli, həm də beynəlxalq moda mühitində fəaliyyət göstərən dizaynerlər sırasında yer alır. Onun peşəkar fəaliyyəti **“Leya Couture”** və **“Dably Baku”** kimi moda layihələri ilə yanaşı, müxtəlif dəb nümayişləri, beynəlxalq təlimlər, xüsusi kolleksiyalar və yaradıcı əməkdaşlıqlarla müşayiət olunur.
+Azərbaycan moda sənayesində özünəməxsus üslubu və yaradıcı yanaşması ilə seçilən **Leyli Zalova** son illərdə həm yerli, həm də beynəlxalq moda mühitində fəaliyyət göstərən dizaynerlər sırasında yer alır. Onun peşəkar fəaliyyəti **“Leya Couture”** və **“Dably Baku”** kimi moda layihələri ilə yanaşı, müxtəlif dəb nümayişləri, beynəlxalq təlimlər, xüsusi kolleksiyalar və yaradıcı əməkdaşlıqlarla əhatə olunub.
 
 Leyli Zalovanın fəaliyyətində əsas istiqamət müasir qadın obrazını estetika, zəriflik və fərdi üslub üzərindən formalaşdırmaqdır. O, geyimi yalnız gündəlik istifadə vasitəsi kimi deyil, insanın xarakterini və fərdi ifadəsini tamamlayan mühüm vizual element kimi təqdim edən dizaynerlərdəndir.
 
