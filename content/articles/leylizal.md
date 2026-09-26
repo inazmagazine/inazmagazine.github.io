@@ -21,7 +21,7 @@ Leyli Zalovanın fəaliyyətində əsas istiqamət müasir qadın obrazını est
 
 **Baku Fashion Week**
 
-2016-cı ildə Bakıda keçirilən **Baku Fashion Week** moda tədbirində Leyli Zalova iştirak edib. Bu layihə onun moda sahəsində peşəkar fəaliyyətinin diqqətçəkən mərhələlərindən biri olub.
+2016-cı ildə Bakıda keçirilən **Baku Fashion Week** moda tədbirində Leyli Zalova da iştirak edib. Bu layihə onun moda sahəsində peşəkar fəaliyyətinin diqqətçəkən mərhələlərindən biri olub.
 
 Leyli Zalovanın sahibkarlıq və dizayn fəaliyyətinin digər mühüm istiqaməti **“Dably Baku”** brendidir. Dably 2019-cu ildə **Leyli Zalova** və **Aynur Xəlilova** tərəfindən təsis edilib. Brendin məhsullarının öz atelyesində hazırlanması və fərdi sifarişlər əsasında geyimlərin tikilməsi əsas fəaliyyət istiqamətlərindəndir. Dably layihəsinin yaradılması ilə Zalovanın fəaliyyəti yalnız dizayn və moda nümayişləri ilə deyil, yerli istehsal və atelye fəaliyyəti ilə də genişlənib. Brend müxtəlif parçalar və fərdi dizaynlar əsasında müştərilərə xüsusi geyimlərin hazırlanmasını təklif edir.
 
