@@ -32,6 +32,6 @@ Hazırda Sevda Məmmədova biznes strateqi, spiker və influenser kimi də fəal
 
 Onun qarşıdakı əsas hədəflərindən biri **“Qadınlar üzrə birinci”** ifadəsini yalnız şəxsi brendinin sloqanı kimi deyil, Azərbaycanda qadınların inkişafı, transformasiyası və potensialının reallaşdırılması ilə assosiasiya olunan konsepsiyaya çevirməkdir.
 
-“Mən ‘birinci’ olduğumu söyləməklə kifayətlənmək istəmirəm. Məqsədim bu mövqeyi həyata keçirdiyim hər yeni layihə, səhnə çıxışım və fəaliyyətimin nəticələri ilə əsaslandırmaqdır.”
+“Mən “birinci” olduğumu söyləməklə kifayətlənmək istəmirəm. Məqsədim bu mövqeyi həyata keçirdiyim hər yeni layihə, səhnə çıxışım və fəaliyyətimin nəticələri ilə əsaslandırmaqdır.”
 
 @sevasboss
