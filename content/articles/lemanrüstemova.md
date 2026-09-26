@@ -4,12 +4,12 @@ description: “Trendə uyğunlaşmır, öz trendini yaradır”
 author: I’NAZ komandası
 date: 2026-09-26
 category: Peşəkarlar
-image: /media/img8025.jpeg
+image: /media/img8025-1.jpeg
 image_alt: Ləman Rüstəmova
 gallery:
   - {}
 home_section: main
-background: "#E1C0B6"
+background: "#BFBFBF"
 text_color: black
 partner: false
 status: published
