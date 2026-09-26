@@ -64,11 +64,18 @@ test('Generated internal links and all image variants exist', async () => {
   }
 });
 
-test('Google üçün crawl edilə bilən favicon faylları yaradılır', async () => {
-  for (const file of ['favicon.svg', 'favicon-96.png', 'apple-touch-icon.png']) {
-    assert.equal(existsSync(path.join('dist', file)), true, `${file} yaradılmayıb`);
+test('Brand PNG favicon variants are square and linked on every page', async () => {
+  const sharp=(await import('sharp')).default;
+  for (const size of [16,32,48,96,180]) {
+    const file=size===180?'apple-touch-icon.png':`favicon-${size}.png`;
+    const meta=await sharp(path.join('dist',file)).metadata();
+    assert.equal(meta.width,size); assert.equal(meta.height,size); assert.equal(meta.format,'png');
   }
-  const home = await readFile(path.join('dist', 'index.html'), 'utf8');
-  assert.match(home, /rel="icon" type="image\/svg\+xml" href="\/favicon\.svg"/);
-  assert.match(home, /rel="icon" type="image\/png" sizes="96x96" href="\/favicon-96\.png"/);
+  for(const file of (await walk('dist')).filter(p=>p.endsWith('.html'))) {
+    const html=await readFile(file,'utf8');
+    assert.ok(html.includes('sizes="96x96" href="/favicon.png"'));
+    assert.ok(html.includes('rel="apple-touch-icon"'));
+    assert.ok(!html.includes('href="/favicon.svg"'));
+  }
+  assert.ok(!(await readFile('dist/robots.txt','utf8')).includes('Disallow:'));
 });
