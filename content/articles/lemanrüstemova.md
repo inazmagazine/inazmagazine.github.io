@@ -13,6 +13,7 @@ background: "#BFBFBF"
 text_color: black
 partner: false
 status: published
+home_order: 3
 ---
 Ləman Rüstəmova sosial mediada özünəməxsus üslubu, fərqli obrazları və sərbəst yanaşması ilə seçilən yeni nəsil influenserlərdəndir. Model kimi fəaliyyət göstərən Ləman xanım zamanla sosial medianı yalnız paylaşım platforması deyil, həm də yaradıcılığını və fərdi üslubunu nümayiş etdirdiyi bir məkana çevirib. Onun geniş auditoriya tərəfindən tanınmasında TikTok-un ilk dövrlərində yaratdığı kontentin xüsusi rolu olub.
 
