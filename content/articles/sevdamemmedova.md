@@ -22,7 +22,7 @@ Onun qadınlar üçün yaratdığı layihələr sırasında **FEMPIRE Academy** 
 
 Sevda Məmmədovanın sosial media platformalarındakı auditoriyasının əhəmiyyətli hissəsini də qadınlar təşkil edir. O, öz platformasında motivasiya, şəxsi inkişaf, karyera, biznes və şəxsi brendinq mövzularına toxunur. Bununla belə, onun yanaşmasında motivasiya son məqsəd deyil, inkişaf prosesinin başlanğıc mərhələsi kimi təqdim olunur:
 
-“Bir qadına ‘sən bacararsan’ demək kifayət deyil. Əsas məsələ onun potensialını real nəticəyə, gəlirə və təsir imkanına çevirməsinə dəstək olmaqdır.”
+“Bir qadına “sən bacararsan” demək kifayət deyil. Əsas məsələ onun potensialını real nəticəyə, gəlirə və təsir imkanına çevirməsinə dəstək olmaqdır.”
 
 Sevda Məmmədovanın peşəkar fəaliyyətinin əsas istiqamətlərindən biri rəqəmsal biznes sahəsidir. O, uzun illərdir bu istiqamətdə fəaliyyət göstərir və **SEVAS Digital Agency**-nin təsisçisidir. Agentlik bizneslər üçün brendinq, rəqəmsal strategiya, sosial media idarəçiliyi, dizayn və digər rəqəmsal həllər təqdim edir.
 
