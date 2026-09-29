@@ -16,7 +16,7 @@ partner: false
 archive: false
 status: published
 ---
-**** İncəsənətin fərqli sahələrlə vəhdəti bəzən ənənəvi yaradıcılıq anlayışına tamamilə yeni baxış qazandırır. Rəssamlıqla modanın kəsişdiyi belə yaradıcı yanaşmalardan biri də rəssam və dizayner **Vəfa Əsədovanın təsis etdiyi ArtSelins brendidir**. Müəllif əsərlərinin təbii ipək üzərinə köçürülməsi ideyası üzərində formalaşan brend incəsənəti gündəlik həyatın bir hissəsinə çevirməyi hədəfləyir.
+İncəsənətin fərqli sahələrlə vəhdəti bəzən ənənəvi yaradıcılıq anlayışına tamamilə yeni baxış qazandırır. Rəssamlıqla modanın kəsişdiyi belə yaradıcı yanaşmalardan biri də rəssam və dizayner **Vəfa Əsədovanın təsis etdiyi ArtSelins brendidir**. Müəllif əsərlərinin təbii ipək üzərinə köçürülməsi ideyası üzərində formalaşan brend incəsənəti gündəlik həyatın bir hissəsinə çevirməyi hədəfləyir.
 
 Vəfa Əsədova üçün sənət yalnız kətan üzərində sərgilənən və müəyyən bir məkanda izlənilən əsər deyil. Onun yaradıcılıq yanaşmasının əsasını rəssamlığın fərqli formada yaşadılması, insanların sənətlə daha yaxın təmas qurması və müəllif əsərlərinin yeni vizual ifadə vasitələri ilə təqdim edilməsi təşkil edir. Məhz bu yanaşma ArtSelins brendinin yaranmasının əsas ideyasına çevrilib.
 
