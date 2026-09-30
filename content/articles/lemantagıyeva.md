@@ -1,7 +1,7 @@
 ---
 title: Ləman Tağıyeva
 description: Ləman Tağıyevanın dünyaya baxışını dəyişən səyahətləri
-author: I’NAZ komandası
+author: I’NAZ redaksiyası
 date: 2026-09-30
 category: Həyat tərzi
 image: /media/526502682179269739100972991074643674745988389n.jpg
