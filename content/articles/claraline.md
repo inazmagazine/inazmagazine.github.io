@@ -19,7 +19,7 @@ gallery:
   - image: /media/b4180b92-8a88-4beb-9154-475cff2822c6-1.jpeg
     alt: Claraline
     caption: Matte Me Foundation - Maye tonal kremdir. Mat və hamar görünüşə malik.
-      Dəri tonundaki bərabərsizliyi aradan qaldırır. yüksək örtücülüyə malikdir.
+      Dəri tonundaki bərabərsizliyi aradan qaldırır. Yüksək örtücülüyə malikdir.
 home_section: small
 background: "#FFFFFF"
 text_color: black
