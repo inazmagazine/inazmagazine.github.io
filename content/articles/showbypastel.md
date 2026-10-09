@@ -21,7 +21,7 @@ gallery:
       yaradır Strukturu: Yüngül gel-krem formulasına malikdir. Aplikatoru:
       Məhsulun ucunda xüsusi süngər ucluq mövcuddur. Bu süngər sayəsində məhsulu
       bir başa yanağa tədbiq etmək mümkündür. Suya davamlı formulu sayəsində 8
-      saata qədər qalıcılığa malikdir Nəmə və istiyə qarşı dözümlüdür Dəri
+      saata qədər qalıcılığa malikdir. Nəmə və istiyə qarşı dözümlüdür. Dəri
       Tipləri:  Bütün dəri tipləri üçün uyğundur."
 home_section: small
 background: "#FFFFFF"
