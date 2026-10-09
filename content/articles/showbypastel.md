@@ -18,7 +18,7 @@ gallery:
   - image: /media/7f53e4f6-a117-4146-9fce-adc969f94588.jpeg
     alt: Show by Pastel
     caption: "Dewy Blush seriyasından maye ənlik Dəridə təbii, nəm və parlaq görüntü
-      yaradır Strukturu: Yüngül gel-krem formulasına malikdir Aplikatoru:
+      yaradır Strukturu: Yüngül gel-krem formulasına malikdir. Aplikatoru:
       Məhsulun ucunda xüsusi süngər ucluq mövcuddur Bu süngər sayəsində məhsulu
       bir başa yanağa tədbiq etmək mümkündür Qalıcılıq : Suya davamlı formulu
       sayəsində 8 saata qədər qalıcılığa malikdir Nəmə və istiyə qarşı
