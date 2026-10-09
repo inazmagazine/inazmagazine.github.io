@@ -1,6 +1,8 @@
 ---
 title: MARİAMA
-description: Keçmişin izlərini müasir üslubda daşımaq mümkündürmü?
+description: |-
+  Keçmişin izlərini müasir üslubda daşımaq mümkündürmü?
+  mariama.baku
 author: I’NAZ redaksiyası
 date: 2026-10-08
 category: Brendlər
