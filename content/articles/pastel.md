@@ -4,7 +4,7 @@ description: "@pastel_cosmetic_baku"
 author: I’NAZ redaksiyası
 date: 2026-10-09
 category: Brendlər
-image: /media/img8648.jpeg
+image: /media/1772fcac-8091-44dd-bafb-9067091eb556.jpeg
 image_alt: Pastel
 gallery:
   - image: /media/e812b37f-294d-486c-a0f3-ff9c2557798d.jpeg
