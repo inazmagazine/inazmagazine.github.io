@@ -4,7 +4,7 @@ description: "@pastel_cosmetic_baku"
 author: I’NAZ redaksiyası
 date: 2026-10-09
 category: Brendlər
-image: /media/img8639.jpeg
+image: /media/img8648.jpeg
 image_alt: Pastel
 gallery:
   - image: /media/e812b37f-294d-486c-a0f3-ff9c2557798d.jpeg
@@ -25,6 +25,10 @@ gallery:
       dəriyə hamar görünüş verən Makiyaj Bazası.  4)Glassy Glow Skin
       Serum:  Dəriyə nəm, aydınlıq və təbii parıltı verərək dərinin şüşə kimi
       hamar görünməsinə imkan yaradır."
+  - image: /media/img8648-1.jpeg
+    alt: Pastel
+    caption: Məhsul həm kontur/ bronzer həm də cilddə təbii parlaqlıq yaradan
+      (haylayter) ikili setdir.
 home_section: small
 background: "#FFFFFF"
 text_color: black
