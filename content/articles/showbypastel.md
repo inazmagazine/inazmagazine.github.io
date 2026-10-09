@@ -9,7 +9,7 @@ image_alt: Show by Pastel
 gallery:
   - image: /media/img8635-1.webp
     alt: Show by Pastel
-    caption: "Show Your Mood - dörtlü Nömrə: 441 Tərkib-Veqan, dermatoloji olaraq
+    caption: "Show Your Mood - dörtlü. Nömrə: 441 Tərkib-Veqan, dermatoloji olaraq
       test edilmişdir paraben və qlüten tərkibli deyil."
   - image: /media/28ee493b-51c1-461a-ae15-8f5222bb7d7e.jpeg
     alt: "Show by Pastel "
@@ -17,12 +17,12 @@ gallery:
       Struktura malik toz göz kölgəsi."
   - image: /media/7f53e4f6-a117-4146-9fce-adc969f94588.jpeg
     alt: Show by Pastel
-    caption: "Dewy Blush seriyasından maye ənlik Dəridə təbii, nəm və parlaq görüntü
-      yaradır Strukturu: Yüngül gel-krem formulasına malikdir. Aplikatoru:
-      Məhsulun ucunda xüsusi süngər ucluq mövcuddur. Bu süngər sayəsində məhsulu
-      bir başa yanağa tədbiq etmək mümkündür. Suya davamlı formulu sayəsində 8
-      saata qədər qalıcılığa malikdir. Nəmə və istiyə qarşı dözümlüdür. Dəri
-      Tipləri:  Bütün dəri tipləri üçün uyğundur."
+    caption: "Dewy Blush seriyasından maye ənlik. Dəridə təbii, nəm və parlaq
+      görüntü yaradır. Strukturu: Yüngül gel-krem formulasına malikdir.
+      Aplikatoru: Məhsulun ucunda xüsusi süngər ucluq mövcuddur. Bu süngər
+      sayəsində məhsulu bir başa yanağa tədbiq etmək mümkündür. Suya davamlı
+      formulu sayəsində 8 saata qədər qalıcılığa malikdir. Nəmə və istiyə qarşı
+      dözümlüdür. Dəri Tipləri:  Bütün dəri tipləri üçün uyğundur."
 home_section: small
 background: "#FFFFFF"
 text_color: black
