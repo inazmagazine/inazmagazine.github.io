@@ -9,8 +9,8 @@ image_alt: CLARALİNE
 gallery:
   - image: /media/28c19e5b-03b3-42ae-abde-bdf0abf2f9ff.jpeg
     alt: Claraline
-    caption: "Ənliklər: Rəng seçimi geniş nude tonlarda yüngül teksturalı eyni
-      zamanda uzun qalıcığa malik toz ənliklər."
+    caption: Ənliklər - Rəng seçimi geniş nude tonlarda yüngül teksturalı eyni
+      zamanda uzun qalıcığa malik toz ənliklər.
   - image: /media/img8649.jpeg
     alt: Claraline
     caption: Liquid Blush – Təbii və təravətli rənglərə malik maye ənlik. Yüngül və
@@ -18,9 +18,8 @@ gallery:
       üçün uyğundur.
   - image: /media/b4180b92-8a88-4beb-9154-475cff2822c6-1.jpeg
     alt: Claraline
-    caption: "Matte Me Foundation: Maye tonal kremdir. Mat və hamar görünüşə malik.
-      Dəri tonundaki bərabərsizliyi aradan qaldırır. yüksək örtücülüyə
-      malikdir."
+    caption: Matte Me Foundation - Maye tonal kremdir. Mat və hamar görünüşə malik.
+      Dəri tonundaki bərabərsizliyi aradan qaldırır. yüksək örtücülüyə malikdir.
 home_section: small
 background: "#FFFFFF"
 text_color: black
