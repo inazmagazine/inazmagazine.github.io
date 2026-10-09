@@ -12,7 +12,7 @@ gallery:
     caption: 'Yüksək qalıcılıq "Kissproof" (bulaşmaya davamlı) formulu sayəsində
       asanlıqla silinmir və 10 saata qədər dodaqda qala bilir. Dodaqlara tətbiq
       etdikdən qısa müddət sonra quruyaraq tam mat və dolğun bir görünüş
-      yaradır. Yüngül teksturaya malikdir. Dodaqda ağırlıq hissi yaratmır
+      yaradır. Yüngül teksturaya malikdir. Dodaqda ağırlıq hissi yaratmır.
       Qalıcılıq : Suya-tərə və nəmə qarşı dözümlü. Heyvanlar üzərində test
       edilməyib və tərkibində heyvan mənşəli maddələr yoxdur. Tərkib: Paraben və
       qlüten tərkibli deyil dermatoloji olaraq test edilmişdir.'
