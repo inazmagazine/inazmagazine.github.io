@@ -1,7 +1,8 @@
 ---
 title: Aytac Vəzirova
 description: |-
-  Bir rəssamın dünyası
+  Bir rəssamın dünyası                                                   
+
 
          @ressam_aytac
 author: I‘NAZ redaksiyası
