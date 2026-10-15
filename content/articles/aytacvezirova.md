@@ -17,7 +17,7 @@ gallery:
     alt: Aytac Vəzirova
   - image: /media/img9007.jpeg
     alt: Aytac Vəzirova
-home_section: small
+home_section: hidden
 background: "#FFFFFF"
 text_color: black
 partner: false
