@@ -2,6 +2,7 @@
 title: Aytac Vəzirova
 description: |-
   Bir rəssamın dünyası
+
   @ressam_aytac
 author: I‘NAZ redaksiyası
 date: 2026-10-16
