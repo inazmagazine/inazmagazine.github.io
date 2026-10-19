@@ -11,7 +11,7 @@ background: "#FFFFFF"
 text_color: black
 partner: false
 archive: false
-status: draft
+status: published
 ---
 24 yaşındaki Doğa Su Akarsu; moda, güzellik, makyaj, spor ve seyahat alanlarına duyduğu ilgiyle öne çıkmaktadır. Özellikle moda ve stil konusunda kendine özgü bir bakış açısına sahip olan Akarsu, farklı kombinler aracılığıyla kişisel tarzını yansıtmayı ve modayı bireysel ifadenin önemli bir parçası olarak değerlendirmeyi benimsemektedir. Ona göre moda, güncel trendlerin ötesinde, kişinin karakterini ve estetik anlayışını yansıtan özgün bir ifade biçimidir. Farklı ülkeleri keşfetmeye ve kültürleri yakından tanımaya önem veren Akarsu, başta İsviçre olmak üzere çeşitli ülkelerde yaşama ve bulunma deneyimi edinmiştir. Bu deneyimlerin, dünyaya bakış açısının gelişmesine ve farklı kültürleri daha yakından tanımasına katkı sağladığını ifade etmektedir.
 
