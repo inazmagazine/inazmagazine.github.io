@@ -4,7 +4,7 @@ description: "@___dogasuakr"
 author: I‘NAZ redaksiyası
 date: 2026-10-19
 category: Dəb
-image: /media/85adf4cd-4173-42fc-8c06-791bb89c5f76.jpeg
+image: /media/85adf4cd-4173-42fc-8c06-791bb89c5f76-1.jpeg
 image_alt: Doğa Su Akarsu
 home_section: hidden
 background: "#FFFFFF"
