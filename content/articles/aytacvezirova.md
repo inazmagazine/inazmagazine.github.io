@@ -8,7 +8,7 @@ description: |-
 author: I‘NAZ redaksiyası
 date: 2026-10-16
 category: Mədəniyyət
-image: /media/0ec9980b-c09b-4784-b344-8f7f1af8cec1.jpeg
+image: /media/0ec9980b-c09b-4784-b344-8f7f1af8cec1-1.jpeg
 image_alt: Aytac Vəzirova
 gallery:
   - image: /media/img9004.jpeg
