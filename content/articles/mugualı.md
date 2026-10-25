@@ -1,12 +1,6 @@
 ---
 title: MUGUALI
 description: |+
-  @muguali_                                                               
-
-
-
-
-
   Est. 2015 · Made in Azerbaijan
 
 author: I’NAZ redaksiyası
@@ -45,5 +39,7 @@ status: published
 *MUGUALI üçün kəlağayı sadəcə ipək aksessuar deyil. O, milli kimliyimizin, mədəni yaddaşımızın və estetik zövqümüzün ifadəsidir. Hər naxış bir tarix, hər rəng bir duyğu, hər kompozisiya isə keçmişlə bu gün arasında qurulan yaradıcı körpüdür.*
 
 *Brendin məqsədi Azərbaycan mədəni irsinin zənginliyini müasir estetik baxışla təqdim etmək, ənənəvi ornamentləri yeni dizayn yanaşması ilə yaşatmaq və onları gələcək nəsillərə ötürməkdir.*
+
+@muguali_       
 
 [https://www.instagram.com/muguali_?obrf=MmNpOWFtNWV2bWJv](https://www.instagram.com/muguali_?obrf=MmNpOWFtNWV2bWJv)
