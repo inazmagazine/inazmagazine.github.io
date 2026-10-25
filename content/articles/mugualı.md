@@ -13,7 +13,6 @@ image_alt: Mugualı
 gallery:
   - image: /media/img9668-1.png
     alt: MUGUALI
-  - {}
 home_section: small
 background: "#FFFFFF"
 text_color: black
