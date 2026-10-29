@@ -50,6 +50,7 @@ text_color: black
 partner: false
 archive: false
 status: published
+home_order: 1
 ---
 *Zümrüd Mustafalı sosial media sahəsində **strateji düşüncə, kreativ yanaşma** və **nəticəyönümlü fəaliyyət prinsiplərini** əsas götürən mentor və təlimçidir. Onun peşəkar yanaşması sosial media platformalarında sadəcə kontent paylaşımı ilə məhdudlaşmır. Əsas məqsədi rəqəmsal kommunikasiya imkanlarından səmərəli istifadə etməklə fərdi brendlərin və bizneslərin inkişafına, bazarda mövqelərinin möhkəmləndirilməsinə və uzunmüddətli uğur əldə etmələrinə töhfə verməkdir.*
 
