@@ -37,13 +37,12 @@ gallery:
       hədəflərinə daha sistemli şəkildə yaxınlaşmasına imkan yaradır.
   - image: /media/img9869.jpeg
     alt: Zümrüd Mustafalı
-    caption: Zümrüd Mustafalının əsas hədəfi sosial media sahəsində inkişaf etmək,
+    caption: "Zümrüd Mustafalının əsas hədəfi sosial media sahəsində inkişaf etmək,
       fərdi brendini formalaşdırmaq və ya biznesini rəqəmsal mühitdə daha geniş
       auditoriyaya tanıtmaq istəyən şəxslərə aydın istiqamət göstərməkdir. O,
       bilik, strategiya və kreativ yanaşmanı bir araya gətirərək sosial mediada
       yalnız görünən deyil, eyni zamanda öz mövqeyi, üslubu və auditoriyası ilə
-      seçilən brendlərin formalaşmasına töhfə verməyi qarşısına məqsəd
-      qoyur.  @zuidigital  https://www.instagram.com/zuidigital?exln=MTF1dmUwb2dnamFjNA==
+      seçilən brendlərin formalaşmasına töhfə verməyi qarşısına məqsəd qoyur. "
 home_section: main
 background: "#FFFFFF"
 text_color: black
@@ -57,3 +56,5 @@ home_order: 1
 ***Zuidigital** platformasının yaradıcısı olaraq, Zümrüd Mustafalı sosial media idarəçiliyi, kontent strategiyasının hazırlanması və vizual brend kimliyinin formalaşdırılması istiqamətlərində fəaliyyət göstərir. O, hər bir layihənin özünəməxsus xüsusiyyətlərini nəzərə alaraq fərdi strategiyalar hazırlayır, hədəf auditoriyanın davranış və maraqlarını təhlil edir, bazarın dinamikasını və mövcud tələbləri qiymətləndirir. Bu yanaşma vasitəsilə brendlərin rəqəmsal mühitdə daha aydın mövqelənməsinə, auditoriya ilə düzgün kommunikasiya qurmasına və qarşıya qoyulan məqsədlərə sistemli şəkildə nail olmasına dəstək göstərir.*
 
 *Onun peşəkar fəaliyyətində sosial media yalnız vizual estetika və paylaşımların cəlbediciliyi ilə ölçülən bir platforma deyil, eyni zamanda brendin dəyərlərini, məqsədlərini və fərqləndirici xüsusiyyətlərini auditoriyaya çatdıran strateji kommunikasiya vasitəsidir. Zümrüd Mustafalı hesab edir ki, uğurlu sosial media fəaliyyəti düzgün mesajın uyğun auditoriyaya çatdırılmasını, etimadın formalaşdırılmasını və bu münasibətin konkret nəticələrə çevrilməsini tələb edir. Buna görə də həyata keçirdiyi layihələrdə planlaşdırma, analitik yanaşma, kreativ həllər və nəticələrin qiymətləndirilməsi əsas prinsiplər kimi çıxış edir.*
+
+ @zuidigital  [https://www.instagram.com/zuidigital?exln=MTF1dmUwb2dnamFjNA==](https://www.instagram.com/zuidigital?exln=MTF1dmUwb2dnamFjNA==)
