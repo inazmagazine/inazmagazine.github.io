@@ -13,9 +13,9 @@ partner: false
 archive: false
 status: published
 ---
-Bengisu Kama, 2002 yılında Ankara’da dünyaya gelmiştir. **Atılım Üniversitesi Havacılık** ve **Uzay Mühendisliği** bölümünden 2025 yılında mezun olan Kama, akademik eğitimi boyunca öğrenmeye, araştırmaya ve farklı alanlarda kendini geliştirmeye odaklanmıştır.
+Bengisu Kama, 2002 yılında Ankara’da dünyaya gelmiştir. **Atılım Üniversitesi Havacılık** **ve** **Uzay Mühendisliği** bölümünden 2025 yılında mezun olan Kama, akademik eğitimi boyunca öğrenmeye, araştırmaya ve farklı alanlarda kendini geliştirmeye odaklanmıştır.
 
-Üniversite yıllarında mühendislik alanında çeşitli projelerde yer alan Bengisu Kama, özellikle Atılım Üniversitesi Zenith Roket Takımı bünyesinde edindiği deneyimlerle dikkat çekmiştir. 2025 yılında **Amerika Birleşik Devletleri’nde** düzenlenen **uluslararası IREC Roket Yarışması’na** katılması, kariyer yolculuğunun önemli dönüm noktalarından biri olmuştur. Bu deneyim, kendisine disiplinli çalışma, ekip ruhu ve hedeflere kararlılıkla ilerleme konusunda değerli kazanımlar sağlamıştır.
+Üniversite yıllarında mühendislik alanında çeşitli projelerde yer alan Bengisu Kama, özellikle **Atılım Üniversitesi Zenith Roket Takımı** bünyesinde edindiği deneyimlerle dikkat çekmiştir. 2025 yılında **Amerika Birleşik Devletleri’nde** düzenlenen **uluslararası IREC Roket Yarışması’na** katılması, kariyer yolculuğunun önemli dönüm noktalarından biri olmuştur. Bu deneyim, kendisine disiplinli çalışma, ekip ruhu ve hedeflere kararlılıkla ilerleme konusunda değerli kazanımlar sağlamıştır.
 
 Mühendislik alanındaki akademik geçmişine rağmen ilgi alanlarını tek bir disiplinle sınırlamayan Kama; teknoloji, dijital dünya, sosyal medya ve yaratıcı üretim alanlarına duyduğu ilgiyi zamanla profesyonel bir kariyer yönelimine dönüştürmüştür. Bu doğrultuda dijital içerik üreticiliğine yönelerek farklı bir alanda da kendini geliştirmeye başlamıştır.
 
